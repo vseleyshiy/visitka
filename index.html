@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title> Главная - vseleyshiy </title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;700&family=Roboto&display=swap"
         rel="stylesheet">
-        <link rel="short icon" href="img/short_icon.jpg">
+    <link rel="short icon" href="img/short_icon.jpg">
 </head>
 
 <body>
@@ -21,10 +21,12 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="https://vseleyshiy.github.io/visitka_main-page/" class="header__link active__item">Главная</a>
+                            <a href="https://vseleyshiy.github.io/visitka_main-page/"
+                                class="header__link">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="https://vseleyshiy.github.io/visitka_about-me_page/" class="header__link">Обо мне</a>
+                            <a href="https://vseleyshiy.github.io/visitka_about-me_page/" class="header__link">Обо
+                                мне</a>
                         </li>
                         <li class="header__item">
                             <a href="https://vseleyshiy.github.io/visitka_food-page/" class="header__link">Еда</a>
@@ -34,28 +36,81 @@
             </header>
         </div>
         <div class="container">
+            <section class="slider">
+                <!-- <div class="slider__button-prev">
+                    <label>
+                        < </label>
+                </div> -->
+                <div class="slider_content">
+                    <ul class="slider__list">
+                        <li class="slider__item">
+                            <div class="slider__item-content">
+                                <img src="img/logo.jpg" alt="logo" class="slider__img">
+                            </div>
+                        </li>
+                        <li class="slider__item">
+                            <div class="slider__item-content">
+                                <h2 class="slider__item-title">
+                                    Новое обновление сайта! <br>
+                                    <span style="color: rgb(211, 211, 255);">23.10.2023</span>
+                                </h2>
+                                <div class="slider__item-text">
+                                    <ul class="slider__item-list">
+                                        <li class="slider__item-item">
+                                            Был добавлен слайдер.
+                                        </li>
+                                        <li class="slider__item-item">
+                                            Были исправлены некоторые ошибки в тексте, так же доделано
+                                            меню сайта.
+                                        </li>
+                                        <li class="slider__item-item">
+                                            Информация обо
+                                            мне была перенеса во вкладку "Обо мне".
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="slider__button-next">
+                    <label>
+                        >
+                    </label>
+                </div>
+            </section>
             <section class="hero">
-                <a href="https://vseleyshiy.github.io/cars/" class="hero__img-wrap">
-                    <h2 class="hero__img-text">
-                        <b>&#128153; [CLICK] Первый проект | Центр Автопокраски &#128153;</b>
-                    </h2>
-                    <img src="img/baki_bg.jpg" alt="baki__bg" class="hero__img">
-                </a>
-                <a href="#!" class="hero__img-wrap">
-                    <h2 class="hero__img-text">
-                        <b>coming soon...</b>
-                    </h2>
-                    <img src="img/yuichi_bg.jpg" alt="yuichi_bg" class="hero__img">
-                </a>
-                <a href="#!" class="hero__img-wrap">
-                    <h2 class="hero__img-text">
-                        <b>coming soon...</b>
-                    </h2>
-                    <img src="img/johan_bg.jpg" alt="johan_bg" class="hero__img">
-                </a>
+                <ul class="hero__list">
+                    <li class="hero__item">
+                        <a href="https://vseleyshiy.github.io/cars/" class="hero__img-wrap">
+                            <h2 class="hero__img-text">
+                                <b>&#128153; [CLICK] Первый проект | Центр Автопокраски &#128153;</b>
+                            </h2>
+                            <img src="img/baki_bg.jpg" alt="baki__bg" class="hero__img">
+                        </a>
+                    </li>
+                    <li class="hero__item">
+                        <a href="#!" class="hero__img-wrap">
+                            <h2 class="hero__img-text">
+                                <b>coming soon...</b>
+                            </h2>
+                            <img src="img/yuichi_bg.jpg" alt="yuichi_bg" class="hero__img">
+                        </a>
+                    </li>
+                    <li class="hero__item">
+                        <a href="#!" class="hero__img-wrap">
+                            <h2 class="hero__img-text">
+                                <b>coming soon...</b>
+                            </h2>
+                            <img src="img/johan_bg.jpg" alt="johan_bg" class="hero__img">
+                        </a>
+                    </li>
+                </ul>
             </section>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
