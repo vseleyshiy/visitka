@@ -48,7 +48,7 @@ img {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -91,6 +91,7 @@ img {
     align-items: center;
     column-gap: 10px;
     display: flex;
+    justify-content: center;
 }
 
 .slider_content {
@@ -142,7 +143,7 @@ img {
 .slider__button-prev {
     color: rgb(210, 210, 210);
     background-color: rgb(102, 102, 102);
-    border: 1px solid rgb(212, 212, 212);
+    border: 2px solid rgb(212, 212, 212);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +155,7 @@ img {
 .slider__button-next {
     color: rgb(210, 210, 210);
     background-color: rgb(102, 102, 102);
-    border: 1px solid rgb(212, 212, 212);
+    border: 2px solid rgb(212, 212, 212);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,7 +168,6 @@ img {
     height: 100%;
     width: 100%;
     border-radius: 15px;
-    border: 2px solid white;
     object-fit: cover;
     object-position: left;
 }
