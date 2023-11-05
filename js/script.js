@@ -3,19 +3,19 @@ const slider = document.querySelector('.slider__list');
 btnNext = document.querySelector('.slider__button-next');
 btnPrev = document.querySelector('.slider__button-prev');
 
-btnNext.addEventListener('click', function() {
-    offset = offset + 300;
+btnNext.addEventListener('click', function () {
+    offset = offset + 290;
     slider.style.left = -offset + 'px';
     if (offset > 0) {
-        offset = -300;
+        offset = -290;
     };
 });
 
 function time() {
-    offset = offset + 300;
+    offset = offset + 290;
     slider.style.left = -offset + 'px';
     if (offset > 0) {
-        offset = -300;
+        offset = -290;
     };
 };
 
@@ -32,7 +32,7 @@ setInterval(time, 11000)
 
 // // controlls.forEach((e) => {
 // //     e.addEventListener('click', () => {
-// //         if (Event.target.contains('.left')) { 
+// //         if (Event.target.contains('.left')) {
 // //             let index = ImageIndex - 1;
 
 // //             if (index < 0) {
