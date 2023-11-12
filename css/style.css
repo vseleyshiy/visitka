@@ -50,13 +50,17 @@ img {
 .container {
     max-width: 1000px;
     margin: 0 auto;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
 }
 
 .header {
-    padding-bottom: 10px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
 }
 
 .header__nav {
@@ -67,7 +71,7 @@ img {
 .header__list {
     display: flex;
     justify-content: space-around;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -236,6 +240,16 @@ img {
     background: linear-gradient(#ED213A, #93291E);
     padding: 10px;
     border-radius: 5px;
+    width: 100%;
+}
+
+.hero__first-col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 100%;
+    width: 60%;
 }
 
 .hero__most-title {
@@ -256,7 +270,7 @@ img {
     background-size: cover;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 80px;
+    font-size: 68px;
 }
 
 .hero__text {
@@ -264,6 +278,18 @@ img {
     /* text-shadow: 2px 4px 20px white; */
     font-size: 15px;
 }
+
+.hero__information {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+.hero__information.hide {
+    display: none;
+}
+
+.hero__information-img {}
 
 .hero__decoration {
     height: 100%;
@@ -280,9 +306,9 @@ img {
     object-fit: cover;
 }
 
-.hero__job {
+.hero__second-col {
     height: 100%;
-    width: 70%;
+    width: 40%;
     background: linear-gradient(135deg, #870000, #76270c);
     border: 3px solid white;
     padding: 15px;
@@ -350,7 +376,11 @@ img {
         font-size: 15px;
     }
 
-    .hero__job-info {
+    .hero__first-col {
+        row-gap: 15px;
+    }
+
+    .hero__second-col {
         font-size: 13px;
     }
 
@@ -364,8 +394,20 @@ img {
         flex-direction: column;
     }
 
-    .hero__job {
+    .hero__first-col {
         width: 100%;
+    }
+
+    .hero__second-col {
+        width: 100%;
+    }
+
+    .hero__information {
+        display: none;
+    }
+
+    .hero__information.hide {
+        display: block;
     }
 
     .hero__decoration-img-wrap {
