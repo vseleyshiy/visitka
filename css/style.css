@@ -48,6 +48,7 @@ img {
 }
 
 .container {
+    height: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 60px;
@@ -241,15 +242,17 @@ img {
     padding: 10px;
     border-radius: 5px;
     width: 100%;
+    height: 100%;
 }
 
 .hero__first-col {
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-    height: 100%;
+    row-gap: 100px;
     width: 60%;
+    height: 100%;
 }
 
 .hero__most-title {
@@ -259,7 +262,6 @@ img {
     border-radius: 5px;
     border: 3px solid white;
     display: flex;
-    height: 100%;
 }
 
 .hero__info {}
@@ -288,6 +290,8 @@ img {
     display: none;
 }
 
+.hero__information-img-wrap {}
+
 .hero__information-img {}
 
 .hero__decoration {
@@ -306,7 +310,9 @@ img {
 }
 
 .hero__second-col {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     width: 40%;
     background: linear-gradient(135deg, #870000, #76270c);
     border: 3px solid white;
@@ -315,15 +321,53 @@ img {
 }
 
 .hero__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lists {
+    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
 
+.first__list {}
+
+.second__list {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.hero__list-button {
+    width: 100px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    background: none;
+}
+
+.hero__buttons-prev {}
+
+.hero__buttons-next {}
+
 .hero__item {
     border: 2px solid white;
     border-radius: 15px;
     background-color: white;
+    margin-bottom: 10px;
+}
+
+.hero__item:last-child {
+    margin-bottom: 0;
 }
 
 .hero__img-wrap {
@@ -341,7 +385,7 @@ img {
 .hero__img-text {
     color: rgba(255, 255, 255, 1);
     text-shadow: 1px 1px 6px rgb(86, 86, 255);
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
     bottom: 0;
     padding: 10px;
@@ -375,9 +419,7 @@ img {
         font-size: 15px;
     }
 
-    .hero__first-col {
-        row-gap: 15px;
-    }
+    .hero__most-title {}
 
     .hero__second-col {
         font-size: 13px;
@@ -399,6 +441,7 @@ img {
 
     .hero__second-col {
         width: 100%;
+
     }
 
     .hero__information {
@@ -424,7 +467,7 @@ img {
     }
 
     .hero__img-text {
-        font-size: 15px;
+        font-size: 13.5px;
     }
 
     .hero__title {

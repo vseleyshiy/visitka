@@ -51,18 +51,18 @@
                             <div class="slider__item-content">
                                 <h2 class="slider__item-title">
                                     Новое обновление сайта! <br>
-                                    <span style="color: rgb(211, 211, 255);">08.11.2023</span>
+                                    <span style="color: rgb(211, 211, 255);">07.12.2023</span>
                                 </h2>
                                 <div class="slider__item-text">
                                     <ul class="slider__item-list">
                                         <li class="slider__item-item">
-                                            Был доработан слайдер.
+                                            Визитка доделана.
                                         </li>
                                         <li class="slider__item-item">
-                                            Дизайн сайта вновь был обновлён x2.(12.11.2023)
+                                            Был добавлен слайдер проектов.
                                         </li>
                                         <li class="slider__item-item">
-                                            Появилась функция просмотра информации о проектах.
+                                            Наверное это последнее обновление визитки, хороший проектик :)
                                         </li>
                                     </ul>
                                 </div>
@@ -98,92 +98,181 @@
                         </div>
                     </div>
                     <div class="hero__information">
-                        <img src="img/kaneki_png.png" alt="kaneki" class="hero__information-img">
+                        <div class="hero__information-img-wrap">
+                            <img src="img/kaneki_png.png" alt="kaneki" class="hero__information-img">
+                        </div>
                     </div>
                 </div>
-                <div class="hero__second-col">
-                    <ul class="hero__list">
-                        <li class="hero__item">
-                            <a href="https://vseleyshiy.github.io/game-guess_the_number/" class="hero__img-wrap">
-                                <h2 class="hero__img-text">
-                                    <b>
-                                        &#127918;[CLICK] Игра "Угадай число"&#127918;
-                                    </b>
-                                </h2>
-                                <img src="img/baki_bg.jpg" alt="baki__bg" class="hero__img">
-                            </a>
-                            <div class="hero__job-info">
-                                <label>
-                                    <a class="hero__item-btn">
-                                        Подробнее
-                                    </a>
-                                </label>
-                                <div class="hero__item-info">
-                                    Игра, над которой я сидел целый день (в интернете её делают за 5 минут). Не жалею
-                                    потраченного времени, потому что пока думал над ней вызубрил весь код и еще лучше
-                                    стал понимать программирование.
+                <div class="hero__second-col" id="secondCol">
+                    <div class="buttons">
+                        <button class="hero__buttons-prev hero__list-button" id="heroButtonPrev"
+                            onclick="showFirstList()">
+                            ↑
+                        </button>
+                    </div>
+                    <div class="lists">
+                        <ul class="hero__list first__list" id="heroFirstList">
+                            <li class="hero__item">
+                                <a href="https://vseleyshiy.github.io/cheerful-gardener/" class="hero__img-wrap">
+                                    <h2 class="hero__img-text">
+                                        <b>
+                                            &#127808;[CLICK] Игра | cheerful gardener&#127808;
+                                        </b>
+                                    </h2>
+                                    <img src="img/baki_bg.jpg" alt="baki__bg" class="hero__img">
+                                </a>
+                                <div class="hero__job-info">
+                                    <label>
+                                        <a class="hero__item-btn">
+                                            Подробнее
+                                        </a>
+                                    </label>
+                                    <div class="hero__item-info">
+                                        Веселый фермер фармилка. Фармишь на грядки, покупаешь их, фармишь удобрения,
+                                        удобряешь грядки.
+                                        Пока не обновишь страницу, прогресс не пропадает.
+                                    </div>
+                                    <label>
+                                        <a class="hero__item-btn hero__item-btn-hide">
+                                            Скрыть
+                                        </a>
+                                    </label>
                                 </div>
-                                <label>
-                                    <a class="hero__item-btn hero__item-btn-hide">
-                                        Скрыть
-                                    </a>
-                                </label>
-                            </div>
-                        </li>
-                        <li class="hero__item">
-                            <a href="https://vseleyshiy.github.io/coordinates_map/" class="hero__img-wrap">
-                                <h2 class="hero__img-text">
-                                    <b>&#128310; [CLICK] Первая программа | coordinates_map 1.0 &#128310;</b>
-                                </h2>
-                                <img src="img/yuichi_bg.jpg" alt="yuichi_bg" class="hero__img">
-                            </a>
-                            <div class="hero__job-info">
-                                <label>
-                                    <a class="hero__item-btn">
-                                        Подробнее
-                                    </a>
-                                </label>
-                                <div class="hero__item-info">
-                                    Моя первая "программа" если это можно так назвать. Есть много недочетов, о
-                                    которых я знаю, но не могу исправить из-за нехватки знаний программирования. Её я
-                                    сделал ради развлечения, не для чего больше она не годится, но со временем буду
-                                    улучшать.
+                            </li>
+                            <li class="hero__item">
+                                <a href="https://vseleyshiy.github.io/greedy_cube-game/" class="hero__img-wrap">
+                                    <h2 class="hero__img-text">
+                                        <b>&#128310;[CLICK] Игра | greedy cube&#128310;</b>
+                                    </h2>
+                                    <img src="img/yuichi_bg.jpg" alt="yuichi_bg" class="hero__img">
+                                </a>
+                                <div class="hero__job-info">
+                                    <label>
+                                        <a class="hero__item-btn">
+                                            Подробнее
+                                        </a>
+                                    </label>
+                                    <div class="hero__item-info">
+                                        При помощи стрелок перемещаешь кубик, собираешь монеты, счёт увеличивается.
+                                        Была добавлена в 'cheerful gardener'.
+                                        Ничего удивительного, моя змейка.
+                                    </div>
+                                    <label>
+                                        <a class="hero__item-btn hero__item-btn-hide">
+                                            Скрыть
+                                        </a>
+                                    </label>
                                 </div>
-                                <label>
-                                    <a class="hero__item-btn hero__item-btn-hide">
-                                        Скрыть
-                                    </a>
-                                </label>
-                            </div>
-                        </li>
-                        <li class="hero__item">
-                            <a href="https://vseleyshiy.github.io/cars/" class="hero__img-wrap">
-                                <h2 class="hero__img-text">
-                                    <b>&#128153; [CLICK] Первый проект | Центр Автопокраски &#128153;</b>
-                                </h2>
-                                <img src="img/johan_bg.jpg" alt="johan_bg" class="hero__img">
-                            </a>
-                            <div class="hero__job-info">
-                                <label>
-                                    <a class="hero__item-btn">
-                                        Подробнее
-                                    </a>
-                                </label>
-                                <div class="hero__item-info">
-                                    Первый полностью сделанный мною макет сайта. Шаблон мне не нравился, поэтому
-                                    сделано некачественно + было лень.
+                            </li>
+                            <li class="hero__item">
+                                <a href="https://vseleyshiy.github.io/game-guess_the_number/" class="hero__img-wrap">
+                                    <h2 class="hero__img-text">
+                                        <b>&#128153;[CLICK] Игра "Угадай число"&#128153;</b>
+                                    </h2>
+                                    <img src="img/johan_bg.jpg" alt="johan_bg" class="hero__img">
+                                </a>
+                                <div class="hero__job-info">
+                                    <label>
+                                        <a class="hero__item-btn">
+                                            Подробнее
+                                        </a>
+                                    </label>
+                                    <div class="hero__item-info">
+                                        Отгадываешь число от 1 до 20 и всё. Сидел над ней день, когда в интернете её
+                                        делают за 5 минут :)
+                                    </div>
+                                    <label>
+                                        <a class="hero__item-btn hero__item-btn-hide">
+                                            Скрыть
+                                        </a>
+                                    </label>
                                 </div>
-                                <label>
-                                    <a class="hero__item-btn hero__item-btn-hide">
-                                        Скрыть
-                                    </a>
-                                </label>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                        <ul class="hero__list second__list" id="heroSecondList">
+                            <li class="hero__item">
+                                <a href="https://vseleyshiy.github.io/coordinates_map/" class="hero__img-wrap">
+                                    <h2 class="hero__img-text">
+                                        <b>
+                                            &#127918;[CLICK] Первая программа | coordinates map&#127918;
+                                        </b>
+                                    </h2>
+                                    <img src="img/kaneki__bg.jpg" alt="kaneki_bg" class="hero__img">
+                                </a>
+                                <div class="hero__job-info">
+                                    <label>
+                                        <a class="hero__item-btn">
+                                            Подробнее
+                                        </a>
+                                    </label>
+                                    <div class="hero__item-info">
+                                        Ставит координаты в точку на карте. На её дизайне я сделал 'greedy cube'.
+                                        Смотреть на неё сейчас после 'cheerful gardener' невозможно)))
+                                    </div>
+                                    <label>
+                                        <a class="hero__item-btn hero__item-btn-hide">
+                                            Скрыть
+                                        </a>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="hero__item">
+                                <a href="https://vseleyshiy.github.io/cars/" class="hero__img-wrap">
+                                    <h2 class="hero__img-text">
+                                        <b>&#128663;[CLICK] Первый проект | Центр Автопокраски&#128663;</b>
+                                    </h2>
+                                    <img src="img/light_bg.jpg" alt="light_bg" class="hero__img">
+                                </a>
+                                <div class="hero__job-info">
+                                    <label>
+                                        <a class="hero__item-btn">
+                                            Подробнее
+                                        </a>
+                                    </label>
+                                    <div class="hero__item-info">
+                                        Первый полностью сделанный мною макет сайта. Шаблон мне не нравился, поэтому
+                                        сделано некачественно + было лень.
+                                    </div>
+                                    <label>
+                                        <a class="hero__item-btn hero__item-btn-hide">
+                                            Скрыть
+                                        </a>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="hero__item">
+                                <a href="#!" class="hero__img-wrap">
+                                    <h2 class="hero__img-text">
+                                        <b>coming soon...</b>
+                                    </h2>
+                                    <img src="img/akashi_bg.jpg" alt="akashi_bg" class="hero__img">
+                                </a>
+                                <div class="hero__job-info">
+                                    <label>
+                                        <a class="hero__item-btn">
+                                            Подробнее
+                                        </a>
+                                    </label>
+                                    <div class="hero__item-info">
+                                        упс, тут пока пусто
+                                    </div>
+                                    <label>
+                                        <a class="hero__item-btn hero__item-btn-hide">
+                                            Скрыть
+                                        </a>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="hero__buttons-next hero__list-button" id="heroButtonNext"
+                            onclick="showSecondList()">
+                            ↓
+                        </button>
+                    </div>
                 </div>
             </section>
-
         </div>
         <footer class="hero__information hide">
             <img src="img/kaneki_png.png" alt="" class="hero__information-img">

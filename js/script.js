@@ -75,3 +75,50 @@ infoButton[5].addEventListener('click', function () {
     infoButton[5].style.display = 'none';
     infoButton[4].style.display = 'block';
 });
+infoButton[6].addEventListener('click', function () {
+    info[3].style.display = 'block';
+    infoButton[6].style.display = 'none';
+    infoButton[7].style.display = 'block';
+});
+infoButton[7].addEventListener('click', function () {
+    info[3].style.display = 'none';
+    infoButton[6].style.display = 'block';
+    infoButton[7].style.display = 'none';
+});
+infoButton[8].addEventListener('click', function () {
+    info[4].style.display = 'block';
+    infoButton[8].style.display = 'none';
+    infoButton[9].style.display = 'block';
+});
+infoButton[9].addEventListener('click', function () {
+    info[4].style.display = 'none';
+    infoButton[8].style.display = 'block';
+    infoButton[9].style.display = 'none';
+});
+infoButton[10].addEventListener('click', function () {
+    info[5].style.display = 'block';
+    infoButton[10].style.display = 'none';
+    infoButton[11].style.display = 'block';
+});
+infoButton[11].addEventListener('click', function () {
+    info[5].style.display = 'none';
+    infoButton[10].style.display = 'block';
+    infoButton[11].style.display = 'none';
+});
+
+
+let heroButtonPrev = document.getElementById('heroButtonPrev');
+let heroButtonNext = document.getElementById('heroButtonNext');
+let heroFirstList = document.getElementById('heroFirstList');
+let heroSecondList = document.getElementById('heroSecondList');
+let secondCol = document.getElementById('secondCol');
+
+function showSecondList() {
+    heroSecondList.style.display = 'block';
+    heroFirstList.style.display = 'none';
+}
+
+function showFirstList() {
+    heroSecondList.style.display = 'none';
+    heroFirstList.style.display = 'block';
+}
