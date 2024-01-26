@@ -1,108 +1,15 @@
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    font-family: 'Fredoka', sans-serif;
-    font-family: 'Roboto', sans-serif;
-}
-
-.wrapper {
-    min-height: 100%;
-    background: linear-gradient(135deg, #a8e063, #56ab2f);
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ul>li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-}
-
-.header__container {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-.header {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100%;
-}
-
-.header__nav {
-    background-color: rgb(0, 92, 0);
-    height: 50px;
-}
-
-.header__list {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.header__item {
-    font-size: 18px;
-    padding: 15px;
-}
-
-.header__item:hover {
-    background-color: green;
-}
-
-.active__item {
-    border-bottom: 2px solid white;
-}
-
-.header__link {
-    color: white;
-}
-
 .about__me {
     border: 2px solid white;
     border-radius: 5px;
     margin-bottom: 10px;
+    margin: 10px;
 }
 
 .about__me-content {
     display: flex;
+    column-gap: 20px;
     padding: 20px;
-    background: linear-gradient(135deg, #008304, #88c14e);
+    /* background: linear-gradient(135deg, #008304, #88c14e); */
 }
 
 .avatar__img-wrap {
@@ -111,15 +18,15 @@ img {
 
 .avatar__img {
     border-radius: 50%;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 
 .about__me-name--info {
-    color: rgb(133, 161, 255);
+    /* color: rgb(133, 161, 255); */
     display: flex;
     column-gap: 8px;
-    margin-left: 20px;
-    font-size: 23px;
+    /* margin-left: 20px; */
+    font-size: 21px;
 }
 
 .about__me-name--information {}
@@ -132,9 +39,10 @@ img {
 .nickname-nickname {}
 
 .nickname__text {
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
     margin-top: 10px;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .translate-nickname {
@@ -147,109 +55,55 @@ img {
     background-size: cover;
     -webkit-background-clip: text;
     color: transparent;
+    text-shadow: 0px 0px 40px white;
 }
 
 .add-information {
     color: white;
-    text-shadow: rgb(0, 255, 64) 1px 0 10px;
-    background: rgb(0, 105, 0);
+    /* text-shadow: rgb(0, 255, 64) 1px 0 10px;
+    background: rgb(0, 105, 0); */
     border-top: 2px solid white;
     padding: 5px;
 }
 
 .who__im {
     padding: 10px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
-.who__im-list {}
+.who__im-title {
+    font-weight: 500;
+    font-size: 30px;
+    text-shadow: 0px 0px 40px white;
+}
 
-.who__im-item {}
+.who__im-text {
+    font-weight: 400;
+    font-size: 18px;
+}
 
 .add-info {}
 
-.contact {
-    border: 2px solid white;
-    border-radius: 5px;
-}
 
-.contact__title {
-    text-align: center;
-    background: green;
-    padding: 10px;
-    color: white;
-    border-bottom: 2px solid white;
-}
+.header {}
 
-.contact__list {
-    display: flex;
-    width: 100%;
-    column-gap: 20px;
-    height: 100%;
-    row-gap: 10px;
-    padding: 10px;
-}
-
-.contact__item {
-    position: relative;
-    flex: 0 1 calc((100% - 20px) / 3);
-    height: 50px;
-    background: rgb(13, 166, 13);
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-}
-
-.contact__item:hover {
-    transform: scale(1.04);
-    transition: all 0.5s ease;
-}
-
-.contact__img-wrap {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    transform: translateX(-155%);
-    column-gap: 5px;
-}
-
-.contact__img {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-radius: 5px;
-}
-
-.contact__link {
-    color: rgb(255, 255, 255);
-}
-
-
-@media (max-width: 420px) {
-    .container {
-        max-width: 420px;
-    }
-
-    .about__me-content {
-        padding: 10px;
-    }
-
+@media (max-width: 440px) {
     .avatar__img-wrap {
-        flex: 0 0 80px;
+        flex: 0 0 70px;
     }
 
     .about__me-name--info {
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    .contact__list {
-        flex-wrap: wrap;
+    .who__im-title {
+        font-size: 25px;
     }
 
-    .contact__item {
-        flex: 0 1 100%;
+    .who__im-text {
+        font-size: 14.5px;
     }
 }

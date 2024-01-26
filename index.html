@@ -4,103 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Главная - vseleyshiy </title>
+    <title> vseleyshiy </title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about-me.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;700&family=Roboto&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="short icon" href="img/short_icon.jpg">
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="header__container">
-            <header class="header">
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="#!" class="header__link active__item">Главная</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="about-me.html" class="header__link">Обо
-                                мне</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="food.html" class="header__link">Еда</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
         <div class="container">
-            <section class="slider">
-                <!-- <div class="slider__button-prev">
-                    <label>
-                        < </label>
-                </div> -->
-                <div class="slider_content">
-                    <ul class="slider__list">
-                        <li class="slider__item">
-                            <div class="slider__item-content">
-                                <img src="img/logo.jpg" alt="logo" class="slider__img">
+            <header class="header">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <div class="burger" id="burger">
+                            <div class="burger__menu">
+                                <div class="burger__line"></div>
+                                <div class="burger__line"></div>
+                                <div class="burger__line"></div>
                             </div>
-                        </li>
-                        <li class="slider__item">
-                            <div class="slider__item-content">
-                                <h2 class="slider__item-title">
-                                    Новое обновление сайта! <br>
-                                    <span style="color: rgb(211, 211, 255);">07.12.2023</span>
-                                </h2>
-                                <div class="slider__item-text">
-                                    <ul class="slider__item-list">
-                                        <li class="slider__item-item">
-                                            Визитка доделана.
-                                        </li>
-                                        <li class="slider__item-item">
-                                            Был добавлен слайдер проектов.
-                                        </li>
-                                        <li class="slider__item-item">
-                                            Наверное это последнее обновление визитки, хороший проектик :)
-                                        </li>
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class="cross" id="cross">
+                            <img src="img/close__button.svg" class="cross__img">
+                        </div>
+                    </li>
+                    <li class="header__item burger__open">
+                        <a href="#!" class="logo">
+                            <div class="logo__img-wrap">
+                                <img src="img/logo.svg" class="logo__img">
                             </div>
-                        </li>
-                    </ul>
-                    <div class="slider__dots" id="dots">
-                        <span class="slider__dot slider__dot-active" id="dot1"></span>
-                        <span class="slider__dot" id="dot2"></span>
-                    </div>
-                </div>
-                <div class="slider__button-next">
-                    <label>
-                        >
-                    </label>
-                </div>
-            </section>
-            <section class="hero">
+                        </a>
+                    </li>
+                    <li class="header__item close burger__open">
+                        <a href="#hero" class="header__link text-shadow">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="header__item close burger__open">
+                        <a href="#about__me" class="header__link text-shadow">
+                            Обо мне
+                        </a>
+                    </li>
+                    <li class="header__item burger__open">
+                        <div class="contact">
+                            <ul class="contact__list">
+                                <li>
+                                    <a href="https://vk.com/vseleyshiy">
+                                        <div class="contact__img-wrap">
+                                            <img src="img/vk_icon.svg" alt="vk icon" class="contact__img">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@vseleyshiy/featured">
+                                        <div class="contact__img-wrap">
+                                            <img src="img/youtube_icon.svg" alt="yt icon" class="contact__img">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.donationalerts.com/r/1lshy">
+                                        <div class="contact__img-wrap">
+                                            <img src="img/donate_icon.svg" alt="donate icon" class="contact__img">
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+            <section class="hero" id="hero">
                 <div class="hero__first-col">
                     <div class="hero__most-title">
                         <div class="hero__decoration">
                             <div class="hero__decoration-img-wrap">
-                                <img src="img/main-hero__img.jpg" alt="ayanami ray" class="hero__decoration-img">
+                                <img src="img/main-hero__img.gif" alt="ayanami ray" class="hero__decoration-img">
                             </div>
                         </div>
                         <div class="hero__info">
                             <div class="hero__title">
-                                MAIN
+                                привет!
                             </div>
                             <div class="hero__text">
-                                Главная страница бла-бла-бла)))
+                                я вселейший :)
                             </div>
                         </div>
                     </div>
                     <div class="hero__information">
-                        <div class="hero__information-img-wrap">
-                            <img src="img/kaneki_png.png" alt="kaneki" class="hero__information-img">
-                        </div>
+                        <section class="slider">
+                            <div class="slider_content">
+                                <ul class="slider__list">
+                                    <li class="slider__item">
+                                        <div class="slider__item-content">
+                                            <img src="img/logo.jpg" alt="logo" class="slider__img">
+                                        </div>
+                                    </li>
+                                    <li class="slider__item">
+                                        <div class="slider__item-content">
+                                            <h2 class="slider__item-title">
+                                                Новое обновление сайта! <br>
+                                                <span style="color: rgb(211, 211, 255);">07.12.2023</span>
+                                            </h2>
+                                            <div class="slider__item-text">
+                                                <ul class="slider__item-list">
+                                                    <li class="slider__item-item">
+                                                        Визитка доделана.
+                                                    </li>
+                                                    <li class="slider__item-item">
+                                                        Целиком и полностью изменил дизайн визитки 26.01.24
+                                                    </li>
+                                                    <li class="slider__item-item">
+                                                        Наверное это последнее обновление визитки, хороший проектик :)
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="slider__item">
+                                        <div class="slider__item-content gardener">
+                                            <h2 class="slider__item-title gardener">
+                                                Сыграй в "cheerful-gardener"!
+                                            </h2>
+                                            <div class="slider__item-text gardener">
+                                                <div class="slider__item-text-img-wrap">
+                                                    <img src="img/cheerful-gardener.png" class="slider__item-text-img">
+                                                </div>
+                                                <ul class="slider__item-list">
+                                                    <li class="slider__item-item">
+                                                        Ведь это увлекательная фармилка
+                                                    </li>
+                                                    <li class="slider__item-item">
+                                                        Покупай грядки и выращивай овощи
+                                                    </li>
+                                                    <li class="slider__item-item">
+                                                        Добывай удобрения и стань самым прокаченным
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="slider__dots" id="dots">
+                                    <span class="slider__dot slider__dot-active" id="dot1"></span>
+                                    <span class="slider__dot" id="dot2"></span>
+                                    <span class="slider__dot" id="dot3"></span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="hero__information-img-wrap">
+                        <img src="img/kaneki_png.png" alt="kaneki" class="hero__information-img">
                     </div>
                 </div>
                 <div class="hero__second-col" id="secondCol">
@@ -165,9 +222,11 @@
                                 </div>
                             </li>
                             <li class="hero__item">
-                                <a href="https://vseleyshiy.github.io/game-guess_the_number/" class="hero__img-wrap">
+                                <!-- https://vseleyshiy.github.io/game-guess_the_number/ -->
+                                <a href="#!" class="hero__img-wrap">
                                     <h2 class="hero__img-text">
-                                        <b>&#128153;[CLICK] Игра "Угадай число"&#128153;</b>
+                                        <!--<b>&#128153;[CLICK] Игра "Угадай число"&#128153; </b>-->
+                                        <b>coming soon...</b>
                                     </h2>
                                     <img src="img/johan_bg.jpg" alt="johan_bg" class="hero__img">
                                 </a>
@@ -178,8 +237,9 @@
                                         </a>
                                     </label>
                                     <div class="hero__item-info">
-                                        Отгадываешь число от 1 до 20 и всё. Сидел над ней день, когда в интернете её
-                                        делают за 5 минут :)
+                                        <!-- Отгадываешь число от 1 до 20 и всё. Сидел над ней день, когда в интернете её
+                                        делают за 5 минут :) -->
+                                        упс, тут пока пусто
                                     </div>
                                     <label>
                                         <a class="hero__item-btn hero__item-btn-hide">
@@ -191,11 +251,13 @@
                         </ul>
                         <ul class="hero__list second__list" id="heroSecondList">
                             <li class="hero__item">
-                                <a href="https://vseleyshiy.github.io/coordinates_map/" class="hero__img-wrap">
+                                <!-- https://vseleyshiy.github.io/coordinates_map/ -->
+                                <a href="#!" class="hero__img-wrap">
                                     <h2 class="hero__img-text">
-                                        <b>
+                                        <!-- <b>
                                             &#127918;[CLICK] Первая программа | coordinates map&#127918;
-                                        </b>
+                                        </b> -->
+                                        <b>coming soon...</b>
                                     </h2>
                                     <img src="img/kaneki__bg.jpg" alt="kaneki_bg" class="hero__img">
                                 </a>
@@ -206,8 +268,9 @@
                                         </a>
                                     </label>
                                     <div class="hero__item-info">
-                                        Ставит координаты в точку на карте. На её дизайне я сделал 'greedy cube'.
-                                        Смотреть на неё сейчас после 'cheerful gardener' невозможно)))
+                                        <!-- Ставит координаты в точку на карте. На её дизайне я сделал 'greedy cube'.
+                                        Смотреть на неё сейчас после 'cheerful gardener' невозможно))) -->
+                                        упс, тут пока пусто
                                     </div>
                                     <label>
                                         <a class="hero__item-btn hero__item-btn-hide">
@@ -217,9 +280,12 @@
                                 </div>
                             </li>
                             <li class="hero__item">
-                                <a href="https://vseleyshiy.github.io/cars/" class="hero__img-wrap">
+                                <!-- https://vseleyshiy.github.io/cars/ -->
+                                <a href="#!" class="hero__img-wrap">
                                     <h2 class="hero__img-text">
-                                        <b>&#128663;[CLICK] Первый проект | Центр Автопокраски&#128663;</b>
+                                        <!-- <b>&#128663;[CLICK] Первый проект | Центр Автопокраски&#128663;</b> -->
+                                        <b>coming soon...</b>
+
                                     </h2>
                                     <img src="img/light_bg.jpg" alt="light_bg" class="hero__img">
                                 </a>
@@ -230,8 +296,9 @@
                                         </a>
                                     </label>
                                     <div class="hero__item-info">
-                                        Первый полностью сделанный мною макет сайта. Шаблон мне не нравился, поэтому
-                                        сделано некачественно + было лень.
+                                        <!-- Первый полностью сделанный мною макет сайта. Шаблон мне не нравился, поэтому
+                                        сделано некачественно + было лень. -->
+                                        упс, тут пока пусто
                                     </div>
                                     <label>
                                         <a class="hero__item-btn hero__item-btn-hide">
@@ -273,9 +340,90 @@
                     </div>
                 </div>
             </section>
+            <section class="wakatime">
+                <div class="wakatime__info">
+                    <div class="wakatime__title">
+                        На этой неделе я писал на:
+                    </div>
+                    <div class="wakatime__table">
+                        <div class="wakatime__information">
+                            <ul class="wakatime__legend">
+                                <li class="wakatime__legend-item">
+                                    <div class="wakatime__lang-color html"></div>
+                                    <div class="wakatime__legend-text">
+                                        HTML
+                                    </div>
+                                </li>
+                                <li class="wakatime__legend-item">
+                                    <div class="wakatime__lang-color css"></div>
+                                    <div class="wakatime__legend-text">
+                                        CSS
+                                    </div>
+                                </li>
+                                <li class="wakatime__legend-item">
+                                    <div class="wakatime__lang-color js"></div>
+                                    <div class="wakatime__legend-text">
+                                        JavaScript
+                                    </div>
+                                </li>
+                                <li class="wakatime__legend-item">
+                                    <div class="wakatime__lang-color php"></div>
+                                    <div class="wakatime__legend-text">
+                                        PHP
+                                    </div>
+                                </li>
+                                <li class="wakatime__legend-item">
+                                    <div class="wakatime__lang-color xml"></div>
+                                    <div class="wakatime__legend-text">
+                                        XML
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <embed class="wakatime__circle"
+                                src="https://wakatime.com/share/@018d372e-e736-4364-bf7f-60001ecae81e/51d11709-1a00-492a-a0c7-e79c00650f35.svg"></embed>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class="about__me" id="about__me">
+                <div class="about__me-content">
+                    <div class="avatar__img-wrap">
+                        <img src="img/avatar.gif" alt="ayanokoji" class="avatar__img">
+                    </div>
+                    <h1 class="about__me-name--info">
+                        <div class="about__me-name--information">
+                            <div class="nickname">
+                                <div class="nickname-nickname nickname-color">vseleyshiy</div>
+                                <div class="translate-nickname nickname-color">вселейший</div>
+                            </div>
+                            <div class="nickname__text">
+                                <span style="color: rgb(255, 157, 0);">HTML</span>
+                                &
+                                <span style="color: rgb(246, 255, 0);">JS</span>
+                                cool dev
+                            </div>
+                        </div>
+                    </h1>
+                </div>
+                <div class="add-information">
+                    <div class="who__im">
+                        <div class="who__im-title">
+                            обо мне
+                        </div>
+                        <div class="who__im-text">
+                            15 y.o. russia, самый лучший веб дев?
+                        </div>
+                    </div>
+                    <!-- <p class="add-info">
+                    
+                    </p> -->
+                </div>
+            </section>
         </div>
-        <footer class="hero__information hide">
-            <img src="img/kaneki_png.png" alt="" class="hero__information-img">
+        <footer class="hero__information">
+            <img src="img/kaneki_png.png" alt="" class="hero__information-img hide">
         </footer>
     </div>
     <script src="js/script.js"></script>
