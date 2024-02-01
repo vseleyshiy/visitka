@@ -10,6 +10,7 @@
     column-gap: 20px;
     padding: 20px;
     /* background: linear-gradient(135deg, #008304, #88c14e); */
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .avatar__img-wrap {
@@ -18,7 +19,7 @@
 
 .avatar__img {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid rgb(199, 199, 199);
 }
 
 .about__me-name--info {
@@ -60,8 +61,9 @@
 
 .add-information {
     color: white;
-    /* text-shadow: rgb(0, 255, 64) 1px 0 10px;
-    background: rgb(0, 105, 0); */
+    /* text-shadow: rgb(0, 255, 64) 1px 0 10px; */
+    /* background: rgb(0, 105, 0); */
+    background-color: rgba(0, 0, 0, 0.85);
     border-top: 2px solid white;
     padding: 5px;
 }

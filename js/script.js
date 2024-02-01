@@ -112,23 +112,27 @@ function showFirstList() {
 
 const headerLinks = document.querySelectorAll('li.header__item');
 let burger = document.getElementById('burger');
-let cross = document.getElementById('cross');
 
 burger.addEventListener('click', () => {
-    burger.style.display = 'none';
-    cross.style.display = 'flex';
-    headerLinks[1].classList.add('close');
-    headerLinks[4].classList.add('close');
-    headerLinks[2].classList.remove('close');
-    headerLinks[3].classList.remove('close');
+    if (burger.classList.contains('open')) {
+        // burger.style.display = 'flex';
+        burger.classList.remove('open');
+        burger.classList.add('exit');
+        setTimeout(() => {
+            burger.classList.remove('exit');
+        }, 350);
+        headerLinks[2].classList.add('close');
+        headerLinks[3].classList.add('close');
+        headerLinks[1].classList.remove('close');
+        headerLinks[4].classList.remove('close');
+    } else {
+        burger.classList.add('open');
+        burger.classList.remove('exit');
+        // burger.classList.remove('burger');
+        headerLinks[1].classList.add('close');
+        headerLinks[4].classList.add('close');
+        headerLinks[2].classList.remove('close');
+        headerLinks[3].classList.remove('close');
+    }
 });
-
-cross.addEventListener('click', () => {
-    cross.style.display = 'none';
-    burger.style.display = 'flex';
-    headerLinks[2].classList.add('close');
-    headerLinks[3].classList.add('close');
-    headerLinks[1].classList.remove('close');
-    headerLinks[4].classList.remove('close');
-})
 
