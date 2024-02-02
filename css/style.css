@@ -14,9 +14,11 @@ body {
 
 .wrapper {
     min-height: 100%;
-    background: url(../img/bg.png);
+    background-image: url(../img/bg.png);
+    background-color: rgb(113, 113, 113);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -121,7 +123,7 @@ img {
     /* background: green; */
     padding: 10px;
     color: white;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
 }
 
 .contact__list {
@@ -148,7 +150,7 @@ img {
 }
 
 .slider {
-    border: 3px solid white;
+    border: 1px solid white;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -190,7 +192,7 @@ img {
 .slider__item-content {
     background-color: white;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 1px solid white;
     height: 100%;
     width: 100%;
 }
@@ -289,14 +291,17 @@ img {
 .hero__most-title {
     /* background: linear-gradient(135deg, #870000, #76270c); */
     background-color: rgba(0, 0, 0, 0.85);
-    padding: 15px;
+    padding: 15px 15px 15px 25px;
     border-radius: 5px;
-    border: 3px solid white;
+    border: 1px solid white;
     display: flex;
-    column-gap: 20px;
 }
 
-.hero__info {}
+.hero__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
 
 .hero__title {
     background: linear-gradient(135deg, #40E0D0, #ffe9cc, #ff5dae);
@@ -334,7 +339,7 @@ img {
 
 .hero__information-img {}
 
-.hero__decoration {
+/* .hero__decoration {
     height: 100%;
 }
 
@@ -344,9 +349,9 @@ img {
 
 .hero__decoration-img {
     border-radius: 5px;
-    border: 2px solid white;
+    border: 1px solid white;
     object-fit: cover;
-}
+} */
 
 .hero__second-col {
     display: flex;
@@ -355,7 +360,7 @@ img {
     width: 50%;
     /* background: linear-gradient(135deg, #870000, #76270c); */
     background-color: rgba(0, 0, 0, 0.85);
-    border: 3px solid white;
+    border: 1px solid white;
     padding: 15px;
     border-radius: 5px;
 }
@@ -389,7 +394,7 @@ img {
 
 .hero__list-button {
     width: 100px;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
     border-radius: 10px;
     padding: 5px;
@@ -402,7 +407,7 @@ img {
 .hero__buttons-next {}
 
 .hero__item {
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 15px;
     background-color: white;
     margin-bottom: 10px;
@@ -563,7 +568,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 5px;
     padding: 15px 10px 10px 10px;
 }

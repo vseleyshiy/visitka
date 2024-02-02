@@ -1,11 +1,13 @@
 .about__me {
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 5px;
     margin-bottom: 10px;
     margin: 10px;
 }
 
 .about__me-content {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: flex;
     column-gap: 20px;
     padding: 20px;
@@ -19,7 +21,7 @@
 
 .avatar__img {
     border-radius: 50%;
-    border: 2px solid rgb(199, 199, 199);
+    border: 1px solid rgb(199, 199, 199);
 }
 
 .about__me-name--info {
@@ -64,8 +66,10 @@
     /* text-shadow: rgb(0, 255, 64) 1px 0 10px; */
     /* background: rgb(0, 105, 0); */
     background-color: rgba(0, 0, 0, 0.85);
-    border-top: 2px solid white;
+    border-top: 1px solid white;
     padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .who__im {
