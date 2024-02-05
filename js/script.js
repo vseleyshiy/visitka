@@ -26,71 +26,74 @@ function time() {
 setInterval(time, 11000);
 
 
-let info = document.querySelectorAll('div.hero__item-info');
-let infoButton = document.querySelectorAll('a.hero__item-btn');
+const heroItem = document.querySelectorAll('li.hero__item');
+const info = document.querySelectorAll('div.hero__item-info');
+const infoButton = document.querySelectorAll('a.hero__item-btn');
+
+function infoShow(el, hide, main) {
+    info[el].style.display = 'inline-block';
+    infoButton[hide].style.display = 'inline-block';
+    infoButton[main].style.display = 'none';
+    heroItem[el].style.color = 'white';
+    heroItem[el].style.border = '1px solid rgb(90, 90, 90)';
+    heroItem[el].style.backgroundColor = 'rgb(90, 90, 90)';
+    heroItem[el].style.transform = 'scale(1.005)';
+    infoButton[hide].style.color = 'rgb(255, 87, 87)';
+    infoButton[main].style.color = 'skyblue';
+}
+function infoHide(el, hide, main) {
+    info[el].style.display = 'none';
+    infoButton[hide].style.display = 'none';
+    infoButton[main].style.display = 'inline-block';
+    heroItem[el].style.color = '';
+    heroItem[el].style.border = '';
+    heroItem[el].style.backgroundColor = '';
+    heroItem[el].style.transform = '';
+    infoButton[hide].style.color = '';
+    infoButton[main].style.color = '';
+}
 
 
 infoButton[0].addEventListener('click', function () {
-    info[0].style.display = 'block';
-    infoButton[1].style.display = 'block';
-    infoButton[0].style.display = 'none';
+    infoShow(0, 1, 0);
 });
 infoButton[1].addEventListener('click', function () {
-    info[0].style.display = 'none';
-    infoButton[1].style.display = 'none';
-    infoButton[0].style.display = 'block';
+    infoHide(0, 1, 0);
 });
 
 infoButton[2].addEventListener('click', function () {
-    info[1].style.display = 'block';
-    infoButton[3].style.display = 'block';
-    infoButton[2].style.display = 'none';
+    infoShow(1, 3, 2);
 });
 infoButton[3].addEventListener('click', function () {
-    info[1].style.display = 'none';
-    infoButton[3].style.display = 'none';
-    infoButton[2].style.display = 'block';
+    infoHide(1, 3, 2);
 });
 
 infoButton[4].addEventListener('click', function () {
-    info[2].style.display = 'block';
-    infoButton[5].style.display = 'block';
-    infoButton[4].style.display = 'none';
+    infoShow(2, 5, 4);
 });
 infoButton[5].addEventListener('click', function () {
-    info[2].style.display = 'none';
-    infoButton[5].style.display = 'none';
-    infoButton[4].style.display = 'block';
+    infoHide(2, 5, 4);
 });
+
 infoButton[6].addEventListener('click', function () {
-    info[3].style.display = 'block';
-    infoButton[6].style.display = 'none';
-    infoButton[7].style.display = 'block';
+    infoShow(3, 7, 6);
 });
 infoButton[7].addEventListener('click', function () {
-    info[3].style.display = 'none';
-    infoButton[6].style.display = 'block';
-    infoButton[7].style.display = 'none';
+    infoHide(3, 7, 6);
 });
+
 infoButton[8].addEventListener('click', function () {
-    info[4].style.display = 'block';
-    infoButton[8].style.display = 'none';
-    infoButton[9].style.display = 'block';
+    infoShow(4, 9, 8);
 });
 infoButton[9].addEventListener('click', function () {
-    info[4].style.display = 'none';
-    infoButton[8].style.display = 'block';
-    infoButton[9].style.display = 'none';
+    infoHide(4, 9, 8);
 });
+
 infoButton[10].addEventListener('click', function () {
-    info[5].style.display = 'block';
-    infoButton[10].style.display = 'none';
-    infoButton[11].style.display = 'block';
+    infoShow(5, 11, 10);
 });
 infoButton[11].addEventListener('click', function () {
-    info[5].style.display = 'none';
-    infoButton[10].style.display = 'block';
-    infoButton[11].style.display = 'none';
+    infoHide(5, 11, 10);
 });
 
 

@@ -14,8 +14,9 @@ body {
 
 .wrapper {
     min-height: 100%;
-    background-image: url(../img/bg2.png);
-    background-color: rgb(113, 113, 113);
+    background-image: url(../img/bg.png);
+    /* background-color: rgb(113, 113, 113); */
+    background-color: rgb(69, 69, 69);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center center;
@@ -71,6 +72,7 @@ img {
     font-size: 17px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
+    transition: transform 0.4s ease;
 }
 
 .header__item:first-child {
@@ -83,25 +85,28 @@ img {
 }
 
 .header__link {
+    transition: all 0.4s ease;
     color: white;
 }
 
-[type='checkbox']:checked,
-[type='checkbox']:not(:checked) {
+.header__link:hover {
+    color: rgb(204, 204, 204);
+    text-shadow: 0px 0px 10px white;
+}
+
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked) {
     position: absolute;
-    /* padding: 10px; */
-    right: 9999px;
+    z-index: -1;
 }
 
 .burger:checked+label,
 .burger:not(:checked)+label {
-    display: block;
     position: relative;
     top: 0;
     left: 0;
     width: 30px;
     height: 24px;
-    z-index: 10;
 }
 
 .burger:checked+label::before,
@@ -109,7 +114,6 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 20;
     width: 30px;
     height: 20px;
     content: '';
@@ -124,7 +128,6 @@ img {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    z-index: 20;
     width: 30px;
     height: 2px;
     content: '';
@@ -174,9 +177,30 @@ img {
 .contact__list {
     display: flex;
     width: 100%;
-    column-gap: 20px;
+    column-gap: 10px;
     height: 100%;
-    row-gap: 10px;
+}
+
+.contact__item {
+    padding: 3px;
+    transition: all 0.4s ease;
+}
+
+.contact__item:hover {
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px white;
+}
+
+.contact__item:nth-child(1):hover {
+    background-color: #0060ac;
+}
+
+.contact__item:nth-child(2):hover {
+    background-color: crimson;
+}
+
+.contact__item:nth-child(3):hover {
+    background-color: orange;
 }
 
 .contact__img-wrap {
@@ -443,8 +467,15 @@ img {
     color: white;
     border-radius: 10px;
     padding: 5px;
+    font-weight: bold;
     text-align: center;
     background: none;
+    transition: all 0.4s ease;
+}
+
+.hero__list-button:hover {
+    color: black;
+    background-color: white;
 }
 
 .hero__buttons-prev {}
@@ -457,10 +488,22 @@ img {
     background-color: white;
     margin-bottom: 10px;
     max-width: 500px;
+    transition: all 0.3s ease;
 }
 
 .hero__item:last-child {
     margin-bottom: 0;
+}
+
+.hero__item:hover {
+    color: white;
+    border: 1px solid rgb(90, 90, 90);
+    background-color: rgb(90, 90, 90);
+    transform: scale(1.005);
+}
+
+.hero__item:hover .hero__item-btn {
+    color: skyblue;
 }
 
 .hero__img-wrap {
