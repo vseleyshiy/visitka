@@ -400,9 +400,9 @@ input[type='checkbox']:not(:checked) {
     height: 100%;
 }
 
-.hero__information-img.hide {
+/* .hero__information-img.hide {
     display: none;
-}
+} */
 
 .hero__information-img-wrap {}
 
@@ -619,9 +619,9 @@ input[type='checkbox']:not(:checked) {
         display: none;
     }
 
-    .hero__information-img.hide {
-        display: block;
-    }
+    /* .hero__information-img.hide {
+        display: flex;
+    } */
 
     .hero__decoration-img-wrap {
         min-width: 120px;
@@ -744,14 +744,74 @@ figure {
     margin: 0;
 }
 
+.footer {
+    padding: 20px 30px;
+    margin: 0 auto;
+    background-image: url(../img/backg2.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.footer__content {
+    margin: 0 auto;
+    max-width: 800px;
+    color: white;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    font-size: 17px;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.footer__title {}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+}
+
+.footer__item {
+    color: blueviolet;
+    display: flex;
+    column-gap: 3px;
+}
+
+.footer__item:last-child {
+    color: white;
+    margin-top: 10px;
+}
+
+.footer__link {
+    color: rgb(196, 196, 196);
+}
+
 @media (max-width: 660px) {
     .wakatime__title {
         font-size: 25px;
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 540px) {
+    .footer {
+        background-image: url(../img/kaneki_png.png);
+    }
+}
+
+@media (max-width: 440px) {
     .wakatime__title {
         font-size: 19px;
+    }
+
+    .footer__content {
+        font-size: 13.5px;
     }
 }
