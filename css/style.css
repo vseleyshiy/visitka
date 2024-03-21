@@ -395,14 +395,13 @@ input[type='checkbox']:not(:checked) {
 .hero__information {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
     width: 100%;
     height: 100%;
 }
 
-/* .hero__information-img.hide {
+.hero__information-img.hide {
     display: none;
-} */
+}
 
 .hero__information-img-wrap {}
 
@@ -619,9 +618,9 @@ input[type='checkbox']:not(:checked) {
         display: none;
     }
 
-    /* .hero__information-img.hide {
+    .hero__information-img.hide {
         display: flex;
-    } */
+    }
 
     .hero__decoration-img-wrap {
         min-width: 120px;
@@ -714,16 +713,16 @@ input[type='checkbox']:not(:checked) {
     background-color: #563d7c;
 }
 
+.wakatime__lang-color.python {
+    background-color: #3572A5;
+}
+
 .wakatime__lang-color.js {
     background-color: #f1e05a;
 }
 
 .wakatime__lang-color.php {
     background-color: #4F5D95;
-}
-
-.wakatime__lang-color.xml {
-    background-color: #0060ac;
 }
 
 .wakatime__legend-text {
@@ -744,74 +743,14 @@ figure {
     margin: 0;
 }
 
-.footer {
-    padding: 20px 30px;
-    margin: 0 auto;
-    background-image: url(../img/backg2.png);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.footer__content {
-    margin: 0 auto;
-    max-width: 800px;
-    color: white;
-    font-weight: 500;
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 20px;
-    font-size: 17px;
-}
-
-.footer__info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
-
-.footer__title {}
-
-.footer__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 5px;
-}
-
-.footer__item {
-    color: blueviolet;
-    display: flex;
-    column-gap: 3px;
-}
-
-.footer__item:last-child {
-    color: white;
-    margin-top: 10px;
-}
-
-.footer__link {
-    color: rgb(196, 196, 196);
-}
-
 @media (max-width: 660px) {
     .wakatime__title {
         font-size: 25px;
     }
 }
 
-@media (max-width: 540px) {
-    .footer {
-        background-image: url(../img/kaneki_png.png);
-    }
-}
-
 @media (max-width: 440px) {
     .wakatime__title {
         font-size: 19px;
-    }
-
-    .footer__content {
-        font-size: 13.5px;
     }
 }
