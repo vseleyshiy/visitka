@@ -196,10 +196,6 @@ input[type='checkbox']:not(:checked) {
 }
 
 .contact__item:nth-child(2):hover {
-    background-color: crimson;
-}
-
-.contact__item:nth-child(3):hover {
     background-color: orange;
 }
 
