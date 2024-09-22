@@ -4,7 +4,7 @@ const projects = [
         link: 'https://github.com/vseleyshiy/EasyLinks',
         github_link: 'https://github.com/vseleyshiy/EasyLinks',
         title: '&#9830; [CLICK] Web App on Python & eel | EasyLinks &#9830;',
-        image: '../img/easylinks_img.jpg',
+        image: 'img/easylinks_img.jpg',
         text_title: 'Приложение, которое поможет вам удобно открывать большое кол-во ссылок в браузере',
         description: `
         <span>
@@ -19,7 +19,7 @@ const projects = [
         link: 'https://github.com/vseleyshiy/ReactMakimaCoin',
         github_link: 'https://github.com/vseleyshiy/ReactMakimaCoin',
         title: '&#9824; [CLICK] Frontend Lending | ReactMakimaCoin &#9824;',
-        image: '../img/reactmakimacoin_img.jpg',
+        image: 'img/reactmakimacoin_img.jpg',
         text_title: 'Фронтенд копия Hamster Kombat (старого) на React JS с Макимой <3',
         description: `
         <span>Сделана главная секция, секция с улучшениями, которая работает,
@@ -32,7 +32,7 @@ const projects = [
         link: 'https://vseleyshiy.github.io/cheerful-gardener/',
         github_link: 'https://github.com/vseleyshiy/cheerful-gardener',
         title: '&#9827; [CLICK] Игра | cheerful gardener &#9827;',
-        image: '../img/cheerfulgardener_img.jpg',
+        image: 'img/cheerfulgardener_img.jpg',
         text_title: 'Веселый фермер фармилка',
         description: `<span>Фармишь на грядки, покупаешь их, фармишь удобрения, удобряешь грядки.
         Пока не обновишь страницу, прогресс не пропадает.</span>`,
@@ -51,7 +51,7 @@ modal.addEventListener('close', () => {
 const list = document.querySelector('.hero__list');
 
 function get_projects() {
-    projects.forEach((el, index) => {
+    projects.forEach(el => {
         const item = `
         <div class="hero__item" style="background-image: url(${el.image})" target="_blank">
             <div class="hero__item-info">
