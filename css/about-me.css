@@ -15,7 +15,7 @@
     padding: 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-image: url(/img/cover.gif);
+    background-image: url(../img/cover.gif);
     background-color: rgba(0, 0, 0, 0.9);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
