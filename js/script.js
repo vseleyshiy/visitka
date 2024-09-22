@@ -1,141 +1,108 @@
-let offset = 0;
-const slider = document.querySelector('.slider__list');
-let dots = document.getElementById('dots');
-let dot1 = document.getElementById('dot1');
-let dot2 = document.getElementById('dot2');
-let dot3 = document.getElementById('dot3');
+// Database
+const projects = [
+    {
+        link: 'https://github.com/vseleyshiy/EasyLinks',
+        github_link: 'https://github.com/vseleyshiy/EasyLinks',
+        title: '&#9830; [CLICK] Web App on Python & eel | EasyLinks &#9830;',
+        image: '/img/easylinks_img.jpg',
+        text_title: 'Приложение, которое поможет вам удобно открывать большое кол-во ссылок в браузере',
+        description: `
+        <span>
+            Подробная инструкция на английском есть на GitHub главной странице проекта в README файле.
+        </span>
+        <span>
+            Ссылка на неё ниже.
+        </span>
+        `,
+    },
+    {
+        link: 'https://github.com/vseleyshiy/ReactMakimaCoin',
+        github_link: 'https://github.com/vseleyshiy/ReactMakimaCoin',
+        title: '&#9824; [CLICK] Frontend Lending | ReactMakimaCoin &#9824;',
+        image: '/img/reactmakimacoin_img.jpg',
+        text_title: 'Фронтенд копия Hamster Kombat (старого) на React JS с Макимой <3',
+        description: `
+        <span>Сделана главная секция, секция с улучшениями, которая работает,
+        но после перезагрузки страницы изменения пропадают.
+        Так же сделана секция с ссылками, за подписку дается монета и тд)</span>
+        <span>Работой доволен, при помощи нее изучил библиотеку React JS, в будущем сделаю Backend на PHP.</span>
+        `,
+    },
+    {
+        link: 'https://vseleyshiy.github.io/cheerful-gardener/',
+        github_link: 'https://github.com/vseleyshiy/cheerful-gardener',
+        title: '&#9827; [CLICK] Игра | cheerful gardener &#9827;',
+        image: '/img/cheerfulgardener_img.jpg',
+        text_title: 'Веселый фермер фармилка',
+        description: `<span>Фармишь на грядки, покупаешь их, фармишь удобрения, удобряешь грядки.
+        Пока не обновишь страницу, прогресс не пропадает.</span>`,
+    },
+]
 
-function time() {
-    offset = offset + 265;
-    slider.style.transform = 'translateX(' + -offset + 'px)';
-    if (offset > 265) {
-        offset = -265;
-    }
-    if (dot1.classList.contains('slider__dot-active')) {
-        dot1.classList.remove('slider__dot-active');
-        dot2.classList.add('slider__dot-active');
-    } else if (dot2.classList.contains('slider__dot-active')) {
-        dot2.classList.remove('slider__dot-active');
-        dot3.classList.add('slider__dot-active');
+// Code
+
+const modal = document.querySelector('.modal');
+const modal__close = document.getElementById('modal__close');
+
+modal.addEventListener('close', () => {
+    document.body.classList.remove('lock');
+})
+
+const list = document.querySelector('.hero__list');
+
+function get_projects() {
+    projects.forEach((el, index) => {
+        const item = `
+        <div class="hero__item" style="background-image: url(${el.image})" target="_blank">
+            <div class="hero__item-info">
+                <a href="${el.link}" class="hero__item-title" target="_blank">
+                    ${el.title}
+                </a>
+                <div class="hero__item-btn">
+                    Подробнее
+                </div>
+            </div>
+        </div>`;
+        list.innerHTML += item;
+    });
+    const btns = document.querySelectorAll('.hero__item-btn');
+
+    btns.forEach((el, index) => {
+        el.addEventListener('click', () => {
+            get_description(index);
+            modal.showModal();
+            document.body.classList.add('lock');
+        });
+    });
+}
+
+get_projects();
+
+function get_description(index) {
+    let title;
+    if (projects[index].title.includes('[CLICK]')) {
+        title = projects[index].title.replace('[CLICK]', '');
     } else {
-        dot3.classList.remove('slider__dot-active');
-        dot1.classList.add('slider__dot-active');
-    };
-};
-
-setInterval(time, 11000);
-
-
-const heroItem = document.querySelectorAll('li.hero__item');
-const info = document.querySelectorAll('div.hero__item-info');
-const infoButton = document.querySelectorAll('a.hero__item-btn');
-
-function infoShow(el, hide, main) {
-    info[el].style.display = 'inline-block';
-    infoButton[hide].style.display = 'inline-block';
-    infoButton[main].style.display = 'none';
-    heroItem[el].style.color = 'white';
-    heroItem[el].style.border = '1px solid rgb(90, 90, 90)';
-    heroItem[el].style.backgroundColor = 'rgb(90, 90, 90)';
-    heroItem[el].style.transform = 'scale(1.005)';
-    infoButton[hide].style.color = 'rgb(255, 87, 87)';
-    infoButton[main].style.color = 'skyblue';
-}
-function infoHide(el, hide, main) {
-    info[el].style.display = 'none';
-    infoButton[hide].style.display = 'none';
-    infoButton[main].style.display = 'inline-block';
-    heroItem[el].style.color = '';
-    heroItem[el].style.border = '';
-    heroItem[el].style.backgroundColor = '';
-    heroItem[el].style.transform = '';
-    infoButton[hide].style.color = '';
-    infoButton[main].style.color = '';
-}
-
-
-infoButton[0].addEventListener('click', function () {
-    infoShow(0, 1, 0);
-});
-infoButton[1].addEventListener('click', function () {
-    infoHide(0, 1, 0);
-});
-
-infoButton[2].addEventListener('click', function () {
-    infoShow(1, 3, 2);
-});
-infoButton[3].addEventListener('click', function () {
-    infoHide(1, 3, 2);
-});
-
-infoButton[4].addEventListener('click', function () {
-    infoShow(2, 5, 4);
-});
-infoButton[5].addEventListener('click', function () {
-    infoHide(2, 5, 4);
-});
-
-infoButton[6].addEventListener('click', function () {
-    infoShow(3, 7, 6);
-});
-infoButton[7].addEventListener('click', function () {
-    infoHide(3, 7, 6);
-});
-
-infoButton[8].addEventListener('click', function () {
-    infoShow(4, 9, 8);
-});
-infoButton[9].addEventListener('click', function () {
-    infoHide(4, 9, 8);
-});
-
-infoButton[10].addEventListener('click', function () {
-    infoShow(5, 11, 10);
-});
-infoButton[11].addEventListener('click', function () {
-    infoHide(5, 11, 10);
-});
-
-
-let heroButtonPrev = document.getElementById('heroButtonPrev');
-let heroButtonNext = document.getElementById('heroButtonNext');
-let heroFirstList = document.getElementById('heroFirstList');
-let heroSecondList = document.getElementById('heroSecondList');
-let secondCol = document.getElementById('secondCol');
-
-function showSecondList() {
-    heroSecondList.style.display = 'flex';
-    heroFirstList.style.display = 'none';
-}
-
-function showFirstList() {
-    heroSecondList.style.display = 'none';
-    heroFirstList.style.display = 'flex';
-}
-
-const headerLinks = document.querySelectorAll('li.header__item');
-let burger = document.getElementById('burger');
-
-burger.addEventListener('click', () => {
-    if (burger.classList.contains('open')) {
-        // burger.style.display = 'flex';
-        burger.classList.remove('open');
-        burger.classList.add('exit');
-        setTimeout(() => {
-            burger.classList.remove('exit');
-        }, 350);
-        headerLinks[2].classList.add('close');
-        headerLinks[3].classList.add('close');
-        headerLinks[1].classList.remove('close');
-        headerLinks[4].classList.remove('close');
-    } else {
-        burger.classList.add('open');
-        burger.classList.remove('exit');
-        // burger.classList.remove('burger');
-        headerLinks[1].classList.add('close');
-        headerLinks[4].classList.add('close');
-        headerLinks[2].classList.remove('close');
-        headerLinks[3].classList.remove('close');
+        title = projects[index].title;
     }
-});
-
+    const item = `
+    <div class="modal__img" style="background-image: url(${projects[index].image})">
+        <div class="modal__title">
+            ${title}
+        </div>
+    </div>
+    <div class="modal__text">
+        <div class="modal__text-title">
+            ${projects[index].text_title}
+        </div>
+        <div class="modal__text-info">
+            ${projects[index].description}
+        </div>
+        <a class="modal__link" href="${projects[index].github_link}" target="_blank">
+            Главная страница проекта на GitHub
+        </a>
+    </div>
+    `
+    const modal__content = document.querySelector('.modal__content');
+    modal__content.innerHTML = item;
+}

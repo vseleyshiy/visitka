@@ -1,51 +1,61 @@
 .about__me {
-    border: 1px solid white;
+    height: 100%;
+    width: 100%;
     border-radius: 5px;
-    margin-bottom: 10px;
-    margin: 10px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* background-color: rgba(100, 100, 100, 0.5); */
+    background-color: rgb(25, 25, 25);
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .about__me-content {
+    padding: 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    background-image: url(/img/cover.gif);
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     display: flex;
+    align-items: center;
     column-gap: 20px;
-    padding: 20px;
-    /* background: linear-gradient(135deg, #008304, #88c14e); */
-    /* background-color: rgba(0, 0, 0, 0.85); */
-    background-color: rgb(30, 30, 30);
 }
 
-.avatar__img-wrap {
-    flex: 0 0 90px;
+.avatar {
+    border-radius: 10px;
+    background-image: url(../img/avatar.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgb(180, 180, 180);
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
 }
 
-.avatar__img {
-    border-radius: 15px;
-    /* border: 1px solid rgb(199, 199, 199); */
-}
-
-.about__me-name--info {
-    /* color: rgb(133, 161, 255); */
+.about__me-nickname {
     display: flex;
-    column-gap: 8px;
-    /* margin-left: 20px; */
-    font-size: 21px;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: start;
 }
-
-.about__me-name--information {}
 
 .nickname {
     display: flex;
+    align-items: center;
     column-gap: 5px;
+    font-size: calc(16px + 6 * (100vw / 1000));
 }
-
-.nickname-nickname {}
 
 .nickname__text {
     color: white;
-    margin-top: 10px;
-    font-size: 16px;
+    font-size: calc(12px + 4 * (100vw / 1000));
     font-weight: 400;
 }
 
@@ -55,6 +65,7 @@
 
 .nickname-color {
     background: linear-gradient(#C9D6FF, #E2E2E2);
+    /* background: linear-gradient(black, black); */
     background-clip: text;
     background-size: cover;
     -webkit-background-clip: text;
@@ -62,36 +73,12 @@
     text-shadow: 0px 0px 40px white;
 }
 
-.add-information {
-    color: white;
-    /* text-shadow: rgb(0, 255, 64) 1px 0 10px; */
-    /* background: rgb(0, 105, 0); */
-    background-color: rgba(0, 0, 0, 0.85);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
 .who__im {
-    padding: 15px 10px 20px 15px;
+    padding: 10px 20px 20px 20px;
     font-family: 'Rubik', sans-serif;
     display: flex;
     flex-direction: column;
     row-gap: 3px;
-}
-
-.who__im-title {
-    font-style: italic;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    /* color: rgb(0, 183, 255); */
-    background: linear-gradient(135deg, aqua, rgb(0, 183, 255), aqua, rgb(0, 183, 255), aqua);
-    background-clip: text;
-    background-size: cover;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0px 0px 30px blue;
-    padding: 10px;
 }
 
 .who__im-subtitle {
@@ -99,37 +86,48 @@
     text-shadow: 0px 0px 40px white;
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
+    font-size: calc(20px + 5 * (100vw / 1000));
 }
 
 .who__im-text {
+    color: rgb(205, 205, 205);
     font-weight: 400;
-    font-size: 18px;
+    font-size: calc(13px + 5 * (100vw / 1000));
 }
 
-.add-info {}
-
-
-.header {}
-
-@media (max-width: 440px) {
-    .avatar__img-wrap {
-        flex: 0 0 70px;
+@media(max-width: 530px) {
+    .about__me-content {
+        padding: 15px;
+        column-gap: 15px;
     }
 
-    .about__me-name--info {
-        font-size: 15.8px;
+    .about__me-nickname {
+        row-gap: 2px;
     }
 
-    .who__im-title {
-        font-size: 17px;
+    .nickname__text {
+        font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1000));
+    }
+
+    .avatar {
+        width: 65px;
+        min-width: 65px;
+        height: 65px;
+    }
+
+    .nickname {
+        font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1000));
+    }
+
+    .who__im {
+        padding: 10px 15px 15px 15px;
     }
 
     .who__im-subtitle {
-        font-size: 25px;
+        font-size: calc(20px + (5 + 5 * 0.7) * ((100vw - 320px) / 1000));
     }
 
     .who__im-text {
-        font-size: 14.5px;
+        font-size: calc(13px + (5 + 5 * 0.7) * ((100vw - 320px) / 1000));
     }
 }
