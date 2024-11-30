@@ -1,133 +1,204 @@
 .about__me {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* background-color: rgba(100, 100, 100, 0.5); */
-    background-color: rgb(25, 25, 25);
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	/* background-color: rgba(100, 100, 100, 0.5); */
+	background-color: rgb(25, 25, 25);
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .about__me-content {
-    padding: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-image: url(../img/cover.gif);
-    background-color: rgba(0, 0, 0, 0.9);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
+	padding: 20px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-image: url(../img/cover.webp);
+	background-color: rgba(0, 0, 0, 0.9);
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
 }
 
 .avatar {
-    border-radius: 10px;
-    background-image: url(../img/avatar.jpg);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: rgb(180, 180, 180);
-    width: 90px;
-    min-width: 90px;
-    height: 90px;
+	border-radius: 10px;
+	background-image: url(../img/avatar.webp);
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: rgb(180, 180, 180);
+	width: 90px;
+	min-width: 90px;
+	height: 90px;
 }
 
 .about__me-nickname {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    align-items: start;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	align-items: start;
+}
+
+.about__me-nickname-info {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
 }
 
 .nickname {
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-    font-size: calc(16px + 6 * (100vw / 1000));
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+	font-size: clamp(1.063rem, 0.857rem + 1.03vw, 1.5rem);
 }
 
 .nickname__text {
-    color: white;
-    font-size: calc(12px + 4 * (100vw / 1000));
-    font-weight: 400;
+	font-size: clamp(0.688rem, 0.599rem + 0.44vw, 0.875rem);
+	color: white;
+	font-weight: 400;
 }
 
 .translate-nickname {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 .nickname-color {
-    background: linear-gradient(#C9D6FF, #E2E2E2);
-    /* background: linear-gradient(black, black); */
-    background-clip: text;
-    background-size: cover;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0px 0px 40px white;
+	background: linear-gradient(#c9d6ff, #e2e2e2);
+	background-clip: text;
+	background-size: cover;
+	-webkit-background-clip: text;
+	color: transparent;
+	text-shadow: 0px 0px 40px white;
+}
+
+.stacks {
+	transform: translateY(-15px);
+	color: white;
+	padding: 10px 20px 0px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+}
+
+.stack__item {
+	color: black;
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.stack__img-wrap {
+	width: 15px;
+	height: 15px;
+	display: flex;
+	place-items: center;
+}
+
+.stack__img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.stack__title {
+	font-size: clamp(0.625rem, 0.566rem + 0.29vw, 0.75rem);
 }
 
 .who__im {
-    padding: 10px 20px 20px 20px;
-    font-family: 'Rubik', sans-serif;
-    display: flex;
-    flex-direction: column;
-    row-gap: 3px;
+	padding: 0px 20px 20px 20px;
+	font-family: 'Rubik', sans-serif;
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
 }
 
 .who__im-subtitle {
-    color: white;
-    text-shadow: 0px 0px 40px white;
-    font-style: normal;
-    font-weight: 500;
-    font-size: calc(20px + 5 * (100vw / 1000));
+	color: white;
+	text-shadow: 0px 0px 40px white;
+	font-style: normal;
+	font-weight: 500;
+	font-size: clamp(1.125rem, 0.949rem + 0.88vw, 1.5rem);
 }
 
 .who__im-text {
-    color: rgb(205, 205, 205);
-    font-weight: 400;
-    font-size: calc(13px + 5 * (100vw / 1000));
+	font-size: clamp(0.813rem, 0.724rem + 0.44vw, 1rem);
+	color: rgb(205, 205, 205);
+	font-weight: 400;
 }
 
-@media(max-width: 530px) {
-    .about__me-content {
-        padding: 15px;
-        column-gap: 15px;
-    }
+.flux__container {
+	color: rgb(230, 230, 230);
+	font-size: 14px;
+}
 
-    .about__me-nickname {
-        row-gap: 2px;
-    }
+.flux {
+	background: linear-gradient(
+		135deg,
+		aqua,
+		rgb(0, 183, 255),
+		aqua,
+		rgb(0, 183, 255),
+		aqua
+	);
+	background-clip: text;
+	background-size: cover;
+	-webkit-background-clip: text;
+	color: transparent;
+}
 
-    .nickname__text {
-        font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1000));
-    }
+@media (max-width: 530px) {
+	.about__me-content {
+		padding: 15px;
+		column-gap: 10px;
+	}
 
-    .avatar {
-        width: 65px;
-        min-width: 65px;
-        height: 65px;
-    }
+	.about__me-nickname {
+		row-gap: 5px;
+	}
 
-    .nickname {
-        font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1000));
-    }
+	.about__me-nickname-info {
+		row-gap: 1px;
+	}
 
-    .who__im {
-        padding: 10px 15px 15px 15px;
-    }
+	.flux__container {
+		font-size: 13px;
+	}
 
-    .who__im-subtitle {
-        font-size: calc(20px + (5 + 5 * 0.7) * ((100vw - 320px) / 1000));
-    }
+	.avatar {
+		width: 60px;
+		min-width: 60px;
+		height: 60px;
+	}
 
-    .who__im-text {
-        font-size: calc(13px + (5 + 5 * 0.7) * ((100vw - 320px) / 1000));
-    }
+	.who__im {
+		padding: 0px 15px 15px 15px;
+	}
+
+	.stacks {
+		padding: 10px 15px 0px 15px;
+		gap: 5px;
+	}
+
+	.stack__item {
+		padding: 2px;
+		border-radius: 2px;
+		column-gap: 2px;
+	}
+
+	.stack__img-wrap {
+		width: 10px;
+		height: 10px;
+	}
 }

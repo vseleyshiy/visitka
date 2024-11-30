@@ -1,113 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Сайт визитка web разработчика под ником - vseleyshiy. Он гений, филантроп, миллиардер и плейбой."
+		/>
+		<meta
+			name="keywords"
+			content="лендинг , landing , сайт , site , визитка , visitka , фронтэнд , фронтенд , frontend , вёрстка , хтмл , джаваскрипт , html , js , javascript , css , HTML , CSS , JS , JavaScript , TS , ts , typescript , TypeScript , php , PHP , React , пхп , ПХП , Реакт , реакт , react , vite , Vite , вит , Вит , mysql , MySQL , backend , back-end , бэкенд , бэкэнд , бекэнд , бекенд , scss , SCSS"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://vseleyshiy.github.io/visitka/" />
+		<meta property="og:title" content="vseleyshiy | visitka" />
+		<meta
+			property="og:description"
+			content="Сайт визитка web разработчика под ником - vseleyshiy"
+		/>
+		<meta
+			property="og:image"
+			content="https://i.pinimg.com/736x/30/c6/b3/30c6b37f1f4ea6e421928eb9dc40920a.jpg"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>vseleyshiy</title>
+		<link rel="stylesheet" href="css/about-me.css" />
+		<link rel="stylesheet" href="css/modal.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="short icon" href="img/short_icon.webp" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title> vseleyshiy </title>
-    <link rel="stylesheet" href="css/about-me.css">
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="short icon" href="img/short_icon.jpg">
-</head>
-
-<body>
-    <dialog class="modal">
-        <div class="modal__inner">
-            <div class="modal__close" onclick="document.querySelector('.modal').close()">
-                <svg class="modal__close-img" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="lucide lucide-x">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
-            </div>
-            <div class="modal__content">
-            </div>
-        </div>
-    </dialog>
-    <div class="wrapper">
-        <div class="container">
-            <header class="header">
-                <div class="header__list">
-                    <a href="index.html" class="logo">
-                        <img src="img/logo.svg" class="logo__img">
-                    </a>
-                    <div class="header__contact">
-                        <a href="https://t.me/vseleyshiy" target="_blank" class="contact__img-wrap">
-                            <img src="img/tg_icon.svg" alt="tg icon" class="contact__img">
-                        </a>
-                        <a href="https://github.com/vseleyshiy" target="_blank" class="contact__img-wrap">
-                            <svg class="contact__img" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
-                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
-                                <path
-                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                                <path d="M9 18c-4.51 2-5-2-7-2" />
-                            </svg>
-                        </a>
-                        <a href="https://www.donationalerts.com/r/1lshy" target="_blank" class="contact__img-wrap">
-                            <img src="img/donate_icon.svg" alt="donate icon" class="contact__img">
-                        </a>
-                    </div>
-                </div>
-            </header>
-            <main class="main">
-                <div class="main__col">
-                    <div class="about__me">
-                        <div class="about__me-content">
-                            <div class="avatar"></div>
-                            <div class="about__me-nickname">
-                                <div class="nickname">
-                                    <div class="nickname-color">vseleyshiy</div>
-                                    <div class="translate-nickname nickname-color">вселейший</div>
-                                </div>
-                                <div class="nickname__text">
-                                    nedo
-                                    <span style="color: rgb(180, 180, 250);">fullstack</span>
-                                    web dev
-                                </div>
-                            </div>
-                        </div>
-                        <div class="who__im">
-                            <div class="who__im-subtitle">
-                                обо мне
-                            </div>
-                            <div class="who__im-text">
-                                толик, russia <br>
-                                самый лучший веб дев?
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="main__col">
-                    <div class="wakatime">
-                        <div class="wakatime__info">
-                            <div class="wakatime__title">
-                                На этой неделе я писал на:
-                            </div>
-                            <figure class="wakatime__circle"><embed
-                                    src="https://wakatime.com/share/@018d372e-e736-4364-bf7f-60001ecae81e/7c58fe48-4b31-4cec-a3ef-3dc42bf49032.svg"></embed>
-                            </figure>
-                        </div>
-                    </div>
-                </div> -->
-            </main>
-            <section class="hero">
-                <div class="hero__title">
-                    Популярные проекты:
-                </div>
-                <div class="hero__list">
-                    <!-- сделать модалки при нажатии на кнопку "подробнее" и сделать адаптив -->
-                    <!-- из адаптива иконки -->
-                    <!-- доделать дизайн модалок, сделать там адаптив шрифта, мб сделать более темный
-                       дизайн, как везде -->
-                </div>
-        </div>
-        <script src="js/script.js" type="module"></script>
-</body>
-
+	<body>
+		<dialog class="modal">
+			<div class="modal__inner">
+				<div
+					class="modal__close"
+					onclick="document.querySelector('.modal').close()"
+				>
+					<svg
+						class="modal__close-img"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="lucide lucide-x"
+					>
+						<path d="M18 6 6 18" />
+						<path d="m6 6 12 12" />
+					</svg>
+				</div>
+				<div class="modal__content"></div>
+			</div>
+		</dialog>
+		<div class="wrapper">
+			<div class="container">
+				<header class="header">
+					<div class="header__list">
+						<a href="index.html" class="logo">
+							<img src="img/logo.svg" class="logo__img" />
+						</a>
+						<div class="header__contact">
+							<a
+								href="https://t.me/vseleyshiy"
+								target="_blank"
+								class="contact__img-wrap"
+							>
+								<img src="img/tg_icon.svg" alt="tg icon" class="contact__img" />
+							</a>
+							<a
+								href="https://github.com/vseleyshiy"
+								target="_blank"
+								class="contact__img-wrap"
+							>
+								<svg
+									class="contact__img"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="lucide lucide-github"
+								>
+									<path
+										d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+									/>
+									<path d="M9 18c-4.51 2-5-2-7-2" />
+								</svg>
+							</a>
+							<a
+								href="https://www.donationalerts.com/r/1lshy"
+								target="_blank"
+								class="contact__img-wrap"
+							>
+								<img
+									src="img/donate_icon.svg"
+									alt="donate icon"
+									class="contact__img"
+								/>
+							</a>
+						</div>
+					</div>
+				</header>
+				<main class="main">
+					<div class="main__col">
+						<div class="about__me">
+							<div class="about__me-content">
+								<div class="avatar"></div>
+								<div class="about__me-nickname">
+									<div class="about__me-nickname-info">
+										<div class="nickname">
+											<div class="nickname-color">vseleyshiy</div>
+											<div class="translate-nickname nickname-color">
+												вселейший
+											</div>
+										</div>
+										<div class="nickname__text">
+											<span style="color: rgb(180, 180, 250)">fullstack</span>
+											web dev
+										</div>
+									</div>
+									<!-- <span class="flux__container">
+										из
+										<a
+											href="https://fluxdev01.github.io/visitka/"
+											target="_blank"
+											class="flux"
+											>Flux Development</a
+										>
+									</span> -->
+								</div>
+							</div>
+							<!-- + nest, prisma, express, node js, tailwind, next.js, react query, react-hook-form, react-hot-toast, zod in future -->
+							<div class="stacks"></div>
+							<div class="who__im">
+								<div class="who__im-subtitle">обо мне</div>
+								<div class="who__im-text">
+									толик, russia <br />
+									самый лучший веб дев?
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<section class="hero">
+					<div class="hero__title">Популярные проекты:</div>
+					<div class="hero__list"></div>
+				</section>
+			</div>
+		</div>
+		<script src="js/database.js" type="module"></script>
+		<script src="js/script.js" type="module"></script>
+	</body>
 </html>
