@@ -1,7 +1,14 @@
 import { projects, stacks } from './database.js'
 
+const wrapper = document.querySelector('.wrapper')
+const loader = document.querySelector('.loader')
+
+window.onload = () => {
+	wrapper.style.display = 'block'
+	loader.style.display = 'none'
+}
+
 const modal = document.querySelector('.modal')
-const modal__close = document.getElementById('modal__close')
 
 modal.addEventListener('close', () => {
 	document.body.classList.remove('lock')
@@ -21,18 +28,16 @@ function get_projects() {
                     Подробнее
                 </div>
             </div>
-        </div>`
+        </div>
+        <a class="hero__item-app" style="background-image: url(${el.image})">
+            ${el.icon}
+        </a>
+        `
 		list.innerHTML += item
 	})
-	const btns = document.querySelectorAll('.hero__item-btn')
 
-	btns.forEach((el, index) => {
-		el.addEventListener('click', () => {
-			get_description(index)
-			modal.showModal()
-			document.body.classList.add('lock')
-		})
-	})
+	add_listeners('.hero__item-btn')
+	add_listeners('.hero__item-app')
 }
 
 get_projects()
@@ -86,3 +91,15 @@ stacks.forEach((el, index) => {
 			'<span style="color: #8c8c8c;font-size: 12px;">и прочие...</span>'
 	}
 })
+
+function add_listeners(items) {
+	const items_arr = document.querySelectorAll(items)
+
+	items_arr.forEach((el, index) => {
+		el.addEventListener('click', () => {
+			get_description(index)
+			modal.showModal()
+			document.body.classList.add('lock')
+		})
+	})
+}
