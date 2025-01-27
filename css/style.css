@@ -250,6 +250,9 @@ img {
 }
 
 @media (max-width: 530px) {
+	body {
+		overflow: hidden;
+	}
 	.header {
 		margin-top: 0px;
 	}
@@ -275,8 +278,6 @@ img {
 		display: flex;
 	}
 }
-
-/* делай как инонки приложения */
 
 @media (max-width: 350px) {
 	.hero__list {
