@@ -8,7 +8,7 @@ window.onload = () => {
 	loader.style.display = 'none'
 }
 
-const modal = document.querySelector('.modal')
+const modal = document.getElementById('modal')
 
 modal.addEventListener('close', () => {
 	document.body.classList.remove('lock')
@@ -67,13 +67,21 @@ function get_description(index) {
         </a>
     </div>
     `
-	const modal__content = document.querySelector('.modal__content')
+	const modal__content = document.getElementById('modal__content')
 	modal__content.innerHTML = item
 }
 
-const stacksList = document.querySelector('.stacks')
+const stacksList = document.getElementById('stacks')
 
-stacks.forEach((el, index) => {
+const modalStacks = document.getElementById('modal-stacks')
+const modalStacksList = document.getElementById('modal-stacks-list')
+
+modalStacks.addEventListener('close', () => {
+	document.body.classList.remove('lock')
+})
+
+for (let i = 0; i < stacks.length; i++) {
+	const el = stacks[i]
 	const item = `
         <div class="stack__item">
                 <div class="stack__img-wrap">
@@ -85,12 +93,26 @@ stacks.forEach((el, index) => {
                 </div>
             <div class="stack__title">${el.title}</div>
         </div>`
-	stacksList.innerHTML += item
-	if (index == stacks.length - 1) {
-		stacksList.innerHTML +=
-			'<span style="color: #8c8c8c;font-size: 12px;">и прочие...</span>'
+	if (i <= 4) {
+		stacksList.innerHTML += item
+	} else {
+		modalStacksList.innerHTML += item
 	}
-})
+
+	if (i == 4) {
+		stacksList.innerHTML +=
+			'<span id="stacks-open" style="color: white;border-bottom: 2px solid white;cursor: pointer">и прочие...</span>'
+	}
+}
+
+const stacksOpen = document.getElementById('stacks-open')
+
+stacksOpen.addEventListener('click', openStacksModal)
+
+function openStacksModal() {
+	modalStacks.showModal()
+	document.body.classList.add('lock')
+}
 
 function add_listeners(items) {
 	const items_arr = document.querySelectorAll(items)

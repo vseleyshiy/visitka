@@ -4,7 +4,7 @@
 	border-radius: 5px;
 	/* background-color: rgba(0, 0, 0, 0.5); */
 	/* background-color: rgba(100, 100, 100, 0.5); */
-	background-color: rgb(25, 25, 25);
+	background-color: var(--profile);
 	/* border: 1px solid black; */
 	display: flex;
 	flex-direction: column;
@@ -15,12 +15,6 @@
 	padding: 20px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	background-image: url(../img/cover.webp);
-	background-color: rgba(0, 0, 0, 0.9);
-	background-blend-mode: multiply;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
 	display: flex;
 	align-items: center;
 	column-gap: 20px;
@@ -33,7 +27,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	background-color: rgb(180, 180, 180);
+	background-color: var(--secondary);
 	width: 90px;
 	min-width: 90px;
 	height: 90px;
@@ -80,7 +74,6 @@
 
 .stacks {
 	transform: translateY(-15px);
-	color: white;
 	padding: 10px 20px 0px 20px;
 	display: flex;
 	flex-wrap: wrap;
@@ -125,7 +118,7 @@
 }
 
 .who__im-subtitle {
-	color: white;
+	color: var(--text-primary);
 	text-shadow: 0px 0px 40px white;
 	font-style: normal;
 	font-weight: 500;
@@ -134,31 +127,11 @@
 
 .who__im-text {
 	font-size: clamp(0.813rem, 0.724rem + 0.44vw, 1rem);
-	color: rgb(205, 205, 205);
+	color: var(--text-secondary);
 	font-weight: 400;
 }
 
-.flux__container {
-	color: rgb(230, 230, 230);
-	font-size: 14px;
-}
-
-.flux {
-	background: linear-gradient(
-		135deg,
-		aqua,
-		rgb(0, 183, 255),
-		aqua,
-		rgb(0, 183, 255),
-		aqua
-	);
-	background-clip: text;
-	background-size: cover;
-	-webkit-background-clip: text;
-	color: transparent;
-}
-
-@media (max-width: 530px) {
+@media (max-width: 480px) {
 	.about__me-content {
 		padding: 15px;
 		column-gap: 10px;

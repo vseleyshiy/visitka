@@ -1,8 +1,20 @@
 * {
 	box-sizing: border-box;
-	scroll-behavior: smooth;
-	scrollbar-color: black rgb(50, 50, 50);
-	scrollbar-width: thin;
+}
+
+:root {
+	--bg: grey;
+	--primary: rgb(255, 75, 75);
+	--secondary: rgb(230, 230, 230);
+	--back: rgb(150, 150, 150);
+	--profile: rgba(100, 100, 100, 0.8);
+	--text-primary: white;
+	--text-secondary: rgb(200, 200, 200);
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
 }
 
 html,
@@ -21,7 +33,8 @@ body {
 	display: none;
 	min-height: 100vh;
 	background-image: url(../img/bg.webp);
-	background-color: rgb(90, 90, 90);
+	/* background-color: rgba(0, 0, 0, 0.95); */
+	background-color: var(--bg);
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -63,7 +76,8 @@ img {
 
 .loader {
 	height: 100vh;
-	background-color: rgb(25, 25, 25);
+	/* background-color: rgb(25, 25, 25); */
+	background-color: var(--primary);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -130,7 +144,7 @@ img {
 }
 
 .contact__img-wrap:hover {
-	background-color: rgba(0, 0, 0, 0.2);
+	/* background-color: rgba(0, 0, 0, 0.2); */
 	border-radius: 5px;
 	box-shadow: 0 0 50px white;
 }
@@ -183,7 +197,7 @@ img {
 	height: 300px;
 	width: 100%;
 	border-radius: 5px;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: var(--back);
 	transition: all 0.3s ease;
 	/* border: 1px solid black; */
 	/* background-color: rgb(113, 113, 113); */
@@ -202,14 +216,14 @@ img {
 	justify-content: center;
 	align-items: center;
 	height: 100px;
-	width: 100px;
+	width: calc((100% - 20px) / 3);
 	font-size: 25px;
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	background-color: rgba(0, 0, 0, 0.7);
-	border: 2px solid rgb(25, 25, 25);
+	background-color: var(--back);
+	border: 2px solid var(--back);
 }
 
 .hero__item-app:hover,
@@ -249,10 +263,7 @@ img {
 	cursor: pointer;
 }
 
-@media (max-width: 530px) {
-	body {
-		overflow: hidden;
-	}
+@media (max-width: 480px) {
 	.header {
 		margin-top: 0px;
 	}
@@ -276,14 +287,5 @@ img {
 
 	.hero__item-app {
 		display: flex;
-	}
-}
-
-@media (max-width: 350px) {
-	.hero__list {
-		justify-content: center;
-	}
-	.hero__item {
-		height: 180px;
 	}
 }

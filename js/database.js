@@ -58,20 +58,8 @@ export const stacks = [
 		img: 'img/stacks/css.svg',
 	},
 	{
-		title: 'SCSS',
-		img: 'img/stacks/scss.svg',
-	},
-	{
 		title: 'JavaScript',
 		img: 'img/stacks/js.svg',
-	},
-	{
-		title: 'TypeScript',
-		img: 'img/stacks/ts.svg',
-	},
-	{
-		title: 'Vite React',
-		img: 'img/stacks/vitereact.svg',
 	},
 	{
 		title: 'PHP',
@@ -82,7 +70,29 @@ export const stacks = [
 		img: 'img/stacks/sql.svg',
 	},
 	{
+		title: 'Vite React',
+		img: 'img/stacks/vitereact.svg',
+	},
+	{
+		title: 'TypeScript',
+		img: 'img/stacks/ts.svg',
+	},
+	{
+		title: 'SCSS',
+		img: 'img/stacks/scss.svg',
+	},
+	{
 		title: 'Axios',
 		img: 'img/stacks/axios.svg',
 	},
+	{
+		title: 'Tanstack React Query',
+		img: 'img/stacks/tanstack_react_query.svg',
+	},
+	{
+		title: 'React-Hook-Form',
+		img: 'img/stacks/react_hook_form.svg',
+	},
 ]
+
+// сделать более красивую stacks модалку и перечисление в ней + найти айконс вот сюда для последних технологий

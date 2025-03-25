@@ -6,36 +6,45 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, viewport-fit=cover"
 		/>
+		<link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+		<link rel="shortcut icon" type="image/webp" href="img/short_icon.webp" />
+		<link rel="image_src" href="img/avatar.webp" />
+		<link rel="canonical" href="https://vseleyshiy.github.io/visitka/" />
+		<title>vseleyshiy</title>
+		<meta name="title" content="vseleyshiy" />
+		<meta name="twitter:title" content="vseleyshiy" />
 		<meta
 			name="description"
-			content="Сайт визитка web разработчика под ником - vseleyshiy. Он гений, филантроп, миллиардер и плейбой."
+			content="Вассап, я vseleyshiy, fullstack web dev, связь tg: @vseleyshiy. я и без костюма гений, плейбой, миллиардер и филантроп..."
+		/>
+		<meta
+			name="twitter:description"
+			content="Вассап, я vseleyshiy, fullstack web dev, связь tg: @vseleyshiy. я и без костюма гений, плейбой, миллиардер и филантроп..."
 		/>
 		<meta
 			name="keywords"
 			content="лендинг , landing , сайт , site , визитка , visitka , фронтэнд , фронтенд , frontend , вёрстка , хтмл , джаваскрипт , html , js , javascript , css , HTML , CSS , JS , JavaScript , TS , ts , typescript , TypeScript , php , PHP , React , пхп , ПХП , Реакт , реакт , react , vite , Vite , вит , Вит , mysql , MySQL , backend , back-end , бэкенд , бэкэнд , бекэнд , бекенд , scss , SCSS"
 		/>
 		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="ru_RU" />
+		<meta property="og:site_name" content="vseleyshiy" />
 		<meta property="og:url" content="https://vseleyshiy.github.io/visitka/" />
-		<meta property="og:title" content="vseleyshiy | visitka" />
+		<meta property="og:title" content="vseleyshiy" />
 		<meta
 			property="og:description"
-			content="Сайт визитка web разработчика под ником - vseleyshiy"
+			content="Вассап, я vseleyshiy, fullstack web dev, связь tg: @vseleyshiy. я и без костюма гений, плейбой, миллиардер и филантроп..."
 		/>
-		<meta
-			property="og:image"
-			content="https://i.pinimg.com/736x/30/c6/b3/30c6b37f1f4ea6e421928eb9dc40920a.jpg"
-		/>
+		<meta property="og:image" content="img/avatar.webp" />
 		<link rel="stylesheet" href="css/style.css" />
-		<title>vseleyshiy</title>
 		<link rel="stylesheet" href="css/about-me.css" />
 		<link rel="stylesheet" href="css/modal.css" />
+		<link rel="stylesheet" href="css/darkmode-toggle.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="short icon" href="img/short_icon.webp" />
 	</head>
 
 	<body>
@@ -45,11 +54,11 @@
 			</div>
 			<div class="loading__title">Загрузка...</div>
 		</div>
-		<dialog class="modal">
+		<dialog class="modal" id="modal-stacks">
 			<div class="modal__inner">
 				<div
 					class="modal__close"
-					onclick="document.querySelector('.modal').close()"
+					onclick="document.getElementById('modal-stacks').close()"
 				>
 					<svg
 						class="modal__close-img"
@@ -68,7 +77,41 @@
 						<path d="m6 6 12 12" />
 					</svg>
 				</div>
-				<div class="modal__content"></div>
+				<div class="modal__content">
+					<div
+						class="modal__img"
+						style="background-image: url(img/stacks_img.webp)"
+					>
+						<div class="modal__title">Прочие технологии ❤</div>
+					</div>
+					<div id="modal-stacks-list" class="modal__stacks-list"></div>
+				</div>
+			</div>
+		</dialog>
+		<dialog class="modal" id="modal">
+			<div class="modal__inner">
+				<div
+					class="modal__close"
+					onclick="document.getElementById('modal').close()"
+				>
+					<svg
+						class="modal__close-img"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="lucide lucide-x"
+					>
+						<path d="M18 6 6 18" />
+						<path d="m6 6 12 12" />
+					</svg>
+				</div>
+				<div class="modal__content" id="modal__content"></div>
 			</div>
 		</dialog>
 		<div class="wrapper">
@@ -79,6 +122,12 @@
 							<img src="img/logo.svg" class="logo__img" />
 						</a>
 						<div class="header__contact">
+							<input
+								class="darkmode__input"
+								type="checkbox"
+								id="darkmode-toggle"
+							/>
+							<label class="darkmode__label" for="darkmode-toggle"></label>
 							<a
 								href="https://t.me/vseleyshiy"
 								target="_blank"
@@ -127,23 +176,14 @@
 											</div>
 										</div>
 										<div class="nickname__text">
-											<span style="color: rgb(180, 180, 250)">fullstack</span>
+											<span>fullstack</span>
 											web dev
 										</div>
 									</div>
-									<!-- <span class="flux__container">
-										из
-										<a
-											href="https://fluxdev01.github.io/visitka/"
-											target="_blank"
-											class="flux"
-											>Flux Development</a
-										>
-									</span> -->
 								</div>
 							</div>
-							<!-- + nest, prisma, express, node js, tailwind, next.js, react query, react-hook-form, react-hot-toast, zod in future -->
-							<div class="stacks"></div>
+							<!-- + nest, prisma, express, node js, tailwind, next.js, zod in future -->
+							<div id="stacks" class="stacks"></div>
 							<div class="who__im">
 								<div class="who__im-subtitle">обо мне</div>
 								<div class="who__im-text">
@@ -162,5 +202,6 @@
 		</div>
 		<script src="js/database.js" type="module"></script>
 		<script src="js/main.js" type="module"></script>
+		<script src="js/darkmode.js" type="module"></script>
 	</body>
 </html>
