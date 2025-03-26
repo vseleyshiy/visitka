@@ -4,7 +4,7 @@ const wrapper = document.querySelector('.wrapper')
 const loader = document.querySelector('.loader')
 
 window.onload = () => {
-	wrapper.style.display = 'block'
+	wrapper.style.display = 'flex'
 	loader.style.display = 'none'
 }
 

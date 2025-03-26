@@ -4,7 +4,7 @@
 
 :root {
 	--bg: grey;
-	--primary: rgb(255, 75, 75);
+	--primary: rgb(173, 64, 64);
 	--secondary: rgb(230, 230, 230);
 	--back: rgb(150, 150, 150);
 	--profile: rgba(100, 100, 100, 0.8);
@@ -31,6 +31,9 @@ body {
 
 .wrapper {
 	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
 	min-height: 100vh;
 	background-image: url(../img/bg.webp);
 	/* background-color: rgba(0, 0, 0, 0.95); */
@@ -70,6 +73,7 @@ img {
 
 .container {
 	max-width: 1000px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 10px 20px 50px 20px;
 }
@@ -119,6 +123,7 @@ img {
 }
 
 .logo {
+	display: block;
 	width: 40px;
 	height: 40px;
 }
@@ -263,6 +268,69 @@ img {
 	cursor: pointer;
 }
 
+.footer {
+	padding: 20px 10px;
+	background-color: var(--primary);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.footer__content {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__col {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	align-items: center;
+}
+.footer__copyright {
+	font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+	color: var(--text-primary);
+}
+.footer__col-title {
+	font-size: clamp(1.25rem, 1.136rem + 0.57vw, 1.563rem);
+	color: var(--text-primary);
+}
+.footer__col-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 5px;
+}
+.footer__col-item {
+	font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+}
+.footer__col-link {
+	fill: transparent;
+	stroke: var(--text-secondary);
+	color: var(--text-secondary);
+	display: flex;
+	align-items: center;
+	column-gap: 3px;
+}
+
+.footer__col-link:hover {
+	stroke: var(--text-primary);
+	color: var(--text-primary);
+}
+
+.footer__col-link:hover .footer__img {
+	stroke: var(--text-primary);
+	color: var(--text-primary);
+}
+.footer__img {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	object-position: center center;
+}
+
 @media (max-width: 480px) {
 	.header {
 		margin-top: 0px;
@@ -287,5 +355,13 @@ img {
 
 	.hero__item-app {
 		display: flex;
+	}
+
+	.footer {
+		padding: 10px;
+	}
+
+	.footer__content {
+		width: 100%;
 	}
 }
